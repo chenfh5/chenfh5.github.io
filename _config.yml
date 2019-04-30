@@ -36,10 +36,8 @@ timezone: Asia/Shanghai
 author:
   type      : # "person" (default), "organization"
   name      : chenfh5
-  url       : https://chenfh5.github.io
-  avatar    : # path or url of avatar image (square)
-  bio       : haha
   email     : chenfh5@qq.com
+  github    : chenfh5
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
