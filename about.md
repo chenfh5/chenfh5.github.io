@@ -1,3 +1,3 @@
 Life is like running Marathon,
 
-Just keep on, rather slow run but not fast walk.
+Just keep on, not fast walk but rather slow run.
