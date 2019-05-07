@@ -2,7 +2,7 @@
 title: 算法漫画阅读摘要
 tags: algorithm
 key: 25
-modify_date: 2019-04-30 18:00:00 +08:00
+modify_date: 2019-05-01 18:00:00 +08:00
 ---
 
 记录一下个人对于公众号[算法爱好者](http://chuansong.me/account/AlgorithmFans)和[程序员小灰](http://blog.csdn.net/bjweimengshu)的阅读摘要，
@@ -261,13 +261,13 @@ base64索引表（0-A,46-u,19-T,20-U）
 # [对称加密 vs 非对称加密 vs hash](https://segmentfault.com/a/1190000004461428)
 对称加密，一方通过密钥将信息加密后，把密文传给另一方，另一方通过这个相同的密钥将密文解密，转换成可以理解的明文，这类算法在加密和解密时使用**相同**的密钥，这组密钥成为在两个或多个成员间的共同秘密，
 
-指加密和解密使用相同密钥的加密算法
+加密和解密使用`相同`密钥的加密算法
 > 明文 <-> 密钥 <-> 密文
 > 常见的对称加密算法有DES、3DES、Blowfish、IDEA、RC4、RC5、RC6和**AES**
 
 非对称加密，首先要有一对key，一个被称为private key私钥，一个成为public key公钥，然后可以把你的public key分发给想给你传密文的用户，然后这些用户使用该public key加密过的密文，只有使用你的private key才能解密。也就是说，只要你自己保存好你的private key，就能确保，别人想给你发的密文不被破解，所以你不用担心**盟友**的密钥被盗，
 
-指加密和解密使用不同密钥的加密算法，也称为公私钥加密
+加密和解密使用`不同`密钥的加密算法，也称为公私钥加密
 > 常见的非对称加密算法有：**RSA**、ECC（移动设备用）、Diffie-Hellman、El Gamal、DSA（数字签名用）
 
 SSH的加密原理中，使用到了RSA非对称加密算法
@@ -745,4 +745,5 @@ public ScheduledThreadPoolExecutor(int corePoolSize) {
 ```
 
 ----
-# 
+# 图
+由顶点，边，权重，方向组成的一种数据结构。

@@ -20,14 +20,16 @@ modify_date:
 虽然增删的底层是原子性的，但是多个API同时执行，最后通过conflict来确认是不妥当的。为了解决这个问题，可以采用以下方式，
 
 1. 分布式定时队列
-	- 类似oozie，由一个master来控制metadata
-	- 将task不写在user application里面，将其再往上抽象一层
+    - 类似oozie，由一个master来控制metadata
+    - 将task不写在user application里面，将其再往上抽象一层
 2. api发送定时任务到broker之前，先过一层分布式锁，获得锁的application才能发送，
-	- mysql字段
-	- zookeeper
-		- 锁超时：临时节点，node crash之后临时节点自动消除（锁释放）
-	- etcd
-	- redis(Redission)
+    - mysql字段
+    - zookeeper
+        - 优点: 模型简单,其临时顺序节点天然支持释放锁和node crash
+        - 缺点: ZAB的全部同步,写性能较低
+    - redis(Redission), etcd
+        - 优点: 高性能(10w级)
+        - 缺点: 实现复杂,需要考虑加锁与超时的原子性,低效的等锁自旋
 3. mq去重，以相同的task id（时间）发送task到mq，然后mq抓取后进行去重（延迟）
 
 其中分布式锁已经有了一个[celery-once](https://github.com/cameronmaske/celery-once)，[celery-singleton](https://github.com/steinitzu/celery-singleton)的实现。
@@ -42,3 +44,4 @@ modify_date:
 - [Celery(四)定时任务](https://www.cnblogs.com/linxiyue/p/8082102.html)
 - [再有人问你分布式锁，这篇文章扔给他](https://juejin.im/post/5bbb0d8df265da0abd3533a5)
 - [Distributed locks with Redis](https://redis.io/topics/distlock)
+- [漫画：如何用Zookeeper实现分布式锁？](http://mp.weixin.qq.com/s?__biz=MzIxMjE5MTE1Nw==&mid=2653194140&idx=1&sn=07b65a50798c26ecdc0fc555128ab937&chksm=8c99f546bbee7c50b1642dc971cb1f5e244dce661546e141734797c8c23c6c3ad779dfb57d3b&scene=21#wechat_redirect)
