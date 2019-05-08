@@ -2,7 +2,7 @@
 title: 算法漫画阅读摘要
 tags: algorithm
 key: 25
-modify_date: 2019-05-01 18:00:00 +08:00
+modify_date: 2019-05-08 18:00:00 +08:00
 ---
 
 记录一下个人对于公众号[算法爱好者](http://chuansong.me/account/AlgorithmFans)和[程序员小灰](http://blog.csdn.net/bjweimengshu)的阅读摘要，
@@ -746,4 +746,141 @@ public ScheduledThreadPoolExecutor(int corePoolSize) {
 
 ----
 # 图
-由顶点，边，权重，方向组成的一种数据结构。
+由顶点，边，权重和方向组成的一种数据结构。
+
+![image.png](https://upload-images.jianshu.io/upload_images/2189341-3c5334af3c8c61bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+> 带权重的有向图（A->B=10, B->A=20），无向图就是`A <-> B`
+
+## 图的存储方式
+1. 邻接矩阵（二维数组）
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-0de1781aad67a05b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 无向图，是对称矩阵，即grid(i)(j) = grid(j)(i)
+        
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-5930ec34f1487798.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 有向图
+    
+    - 优点：简单直观
+    - 缺点：空间复杂度太高，O(n^2)，n是顶点数
+    
+2. 邻接表
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-6d46a22c29a1a9c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 类似hashmap的entry开链表，保存每个顶点能够到达的节点
+    
+    - 优点：空间O(n)
+    - 缺点：找从该点`出发`是O(n)，但是找`到达`该点就是O(n^2)
+
+3. 逆邻接表
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-9f93933f73feb219.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 保存能够到达该顶点的节点
+
+4. 十字链表
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-da528d08cfce05ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 合并后再压缩
+
+5. [邻接多重表](https://blog.csdn.net/bible_reader/article/details/71250117)    
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-5a69f6b6f27b08d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 无向图
+    
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-c5d481068dc0f6b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 邻接表，idx=0表示顶点A
+    
+    ![image.png](https://upload-images.jianshu.io/upload_images/2189341-5a3819be679bf0a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    > 邻接多重表
+
+## 常用算法
+bfs and dfs
+
+1. 单源最短路径
+    - 单个点到任意点到最短路径
+    - [Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)，权重不能为负
+        ```
+          def networkDelayTimeAC2(times: Array[Array[Int]], N: Int, K: Int): Int = {
+            import scala.collection.mutable
+            import scala.collection.mutable.ListBuffer
+        
+            val graph = Array.fill(N)(ListBuffer[(Int, Double)]()) // 节点->list[邻近节点 -> 距离]
+        
+            // base
+            for (p <- times) graph(p(0) - 1).append((p(1) - 1, p(2)))
+            val pq = mutable.PriorityQueue[(Int, Double)]()(Ordering.by(e => -e._2)) // sort by distance in asc
+            val visited = mutable.Set[Int]()
+            pq.enqueue((K - 1, 0)) // 自己到自己
+        
+            // loop, bfs
+            val dist = Array.fill(N)(0d) // 固定idx=K-1的点到其他所有点的距离
+            while (pq.nonEmpty) {
+              val (idx, d) = pq.dequeue()
+              if (!visited.contains(idx)) {
+                dist(idx) = d // pq是asc,所以是小的先出,那么就是idx的时候,最小是d,之后因为visited,idx不会再被更新了
+                visited.add(idx)
+                for ((idx2, d2) <- graph(idx)) {
+                  if (!visited.contains(idx2)) pq.enqueue((idx2, d + d2)) // dist距离是A->B. 现在发现B有邻近节点C,所以A->B->C=d+d2
+                }
+              }
+            }
+        
+            // res
+            println(dist.toList)
+            var res = Double.MinValue
+            for (e <- dist) res = math.max(res, e)
+            if (visited.size == N) res.toInt else -1 // 都遍历到了,所以visited满的
+          }
+        ```
+    - [Bellman-Ford](https://zh.wikipedia.org/wiki/%E8%B4%9D%E5%B0%94%E6%9B%BC-%E7%A6%8F%E7%89%B9%E7%AE%97%E6%B3%95)
+        ```
+          def networkDelayTimeAC(times: Array[Array[Int]], N: Int, K: Int): Int = {
+            val dist = Array.fill(N)(Double.MaxValue)
+        
+            // base
+            dist(K - 1) = 0 // 自己到自己,idx=K-1
+        
+            // loop
+            for (_ <- 1 until N)
+              for (p <- times) {
+                val (u, v, w) = (p(0) - 1, p(1) - 1, p(2))
+                dist(v) = math.min(dist(v), dist(u) + w)
+              }
+        
+            // res
+            println(dist.toList)
+            var res = Double.MinValue
+            for (e <- dist) {
+              if (e >= Double.MaxValue) return -1
+              res = math.max(res, e)
+            }
+            res.toInt
+          }
+        ```
+2. 多源最短路
+    - 任意点到任意点到最短路径
+    - [Floyd-Warshall](https://zh.wikipedia.org/wiki/Floyd-Warshall%E7%AE%97%E6%B3%95)
+        ```
+          def networkDelayTime(times: Array[Array[Int]], N: Int, K: Int): Int = {
+            val dist = Array.fill(N, N)(Double.MaxValue)
+        
+            // base
+            for (i <- 0 until N) dist(i)(i) = 0 // 自己到自己
+            for (p <- times) dist(p(0) - 1)(p(1) - 1) = p(2) // u->v的距离, -1是因为label从1开始
+        
+            // loop
+            for (k <- 0 until N)
+              for (i <- 0 until N)
+                for (j <- 0 until N) {
+                  dist(i)(j) = math.min(dist(i)(j), dist(i)(k) + dist(k)(j)) // 这里会出现max+max=Infinity的情况,但是取了min,所以最后还是max
+                }
+        
+            // res
+            dist.foreach(e => println(e.toList))
+            var res = Double.MinValue
+            for (i <- 0 until N) {
+              val cur = dist(K - 1)(i) // 固定idx=K-1的点到其他所有点的距离
+              if (cur >= Double.MaxValue) return -1
+              res = math.max(res, cur)
+            }
+            res.toInt
+          }
+        ```
+
+> 题外话：今天约谈了，集火啊。
+
+----
