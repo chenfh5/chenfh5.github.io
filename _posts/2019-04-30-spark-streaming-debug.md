@@ -1,5 +1,5 @@
 ---
-title: spark streaming一次调试过程
+title: Spark streaming一次调试过程
 tags: spark
 key: 7
 modify_date: 2019-04-30 18:00:00 +08:00
