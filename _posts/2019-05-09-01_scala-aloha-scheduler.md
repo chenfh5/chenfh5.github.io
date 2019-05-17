@@ -13,7 +13,7 @@ modify_date: 2019-05-16 19:00:00 +08:00
 今天刚好再公众号里面看到介绍的[Aloha](https://github.com/jrthe42/aloha)，而且还是scala写的，之前看的[Oozie](https://github.com/apache/oozie)和jobnavi都是java写的。那么看看这个Aloha是如何工作的，一步一步分解她的各个模块和工作流程，力求之后自己能够独立写出一个分布式调度器来:smile:
 
 ![image.png](https://upload-images.jianshu.io/upload_images/2189341-2d586fe1a61ebfc0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-> 主题架构流程
+> 主体架构流程
 
 # Modules
 这一节主要分解各个模块的架构和流程，
