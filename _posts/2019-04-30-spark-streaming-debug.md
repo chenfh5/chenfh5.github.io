@@ -9,9 +9,9 @@ modify_date: 2019-04-30 18:00:00 +08:00
 
 ----
 背景，batch interval = 120s，10个receiver，吞吐量每秒1000条，一个batch的cache大小是1639KB，每条record大小=1639/(120*1000)*1024=13.99字节
-![batch interval](http://upload-images.jianshu.io/upload_images/2189341-beacee2431162ddd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![batch interval](http://upload-images.jianshu.io/upload_images/2189341-beacee2431162ddd.png)
 
-![storage](http://upload-images.jianshu.io/upload_images/2189341-97a0b1cca952bc39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![storage](http://upload-images.jianshu.io/upload_images/2189341-97a0b1cca952bc39.png)
 
 ----
 
@@ -46,7 +46,7 @@ fix by `--conf spark.driver.memory=4G`
 
 程序还没有完全调通，又有delay了，继续调试，
 
-![s3](http://upload-images.jianshu.io/upload_images/2189341-e1cc3e65802e7903.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![s3](http://upload-images.jianshu.io/upload_images/2189341-e1cc3e65802e7903.png)
 
 ### Q3 spark sql udf调用NPE
 
@@ -91,7 +91,7 @@ Caused by: java.lang.NullPointerException
 ### Q4 rpc的意外两次调用
 从日志上看到，有超过1000条的指定日志（而实际上limit了999条，所以指定日志只能等于999）
 
-![指定日志数量](http://upload-images.jianshu.io/upload_images/2189341-52de1929903b4132.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![指定日志数量](http://upload-images.jianshu.io/upload_images/2189341-52de1929903b4132.png)
 
 在code上面查看了，原来的persist的问题。在function里面persist了，但是function外部多次调用该function的变量val，而function-persist是无用的，所以要重新计算该val。
 ```
@@ -108,9 +108,9 @@ def func(some:[T]) = {
 继续挖掘，发现不是persist的问题，而是spark-sql的filter里面size()函数如果有值，就会引起计算两次。
 在本地复现了该问题，在spark jira提了个[issue](https://issues.apache.org/jira/browse/SPARK-22702)，
 
-![expected.png](http://upload-images.jianshu.io/upload_images/2189341-51ee89377e7159ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![expected.png](http://upload-images.jianshu.io/upload_images/2189341-51ee89377e7159ac.png)
 
-![unexpected.png](http://upload-images.jianshu.io/upload_images/2189341-f87ee2047f0cf120.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![unexpected.png](http://upload-images.jianshu.io/upload_images/2189341-f87ee2047f0cf120.png)
 
 ### Q5 exceeding memory limits
 ```
@@ -124,10 +124,10 @@ def func(some:[T]) = {
 最后通过lazy initialization object，即[惰性初始模式](https://stackoverflow.com/questions/40015777/how-to-perform-one-operation-on-each-executor-once-in-spark)在每个executor里面初始化一个connection资源，然后每个executor的taskSet调用各自所在的executor connection资源，避免了频繁创建connection。
 
 ### Q7 spark ui上有很多残余的job/stage
-![残余jobs](http://upload-images.jianshu.io/upload_images/2189341-6690eae26b2d225b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![残余jobs](http://upload-images.jianshu.io/upload_images/2189341-6690eae26b2d225b.png)
 
-![残余stages](http://upload-images.jianshu.io/upload_images/2189341-548e288f4a9e7637.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![残余stages](http://upload-images.jianshu.io/upload_images/2189341-548e288f4a9e7637.png)
 
-![correct streaming tab](http://upload-images.jianshu.io/upload_images/2189341-8639d7352f729b4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![correct streaming tab](http://upload-images.jianshu.io/upload_images/2189341-8639d7352f729b4a.png)
 
 没有理清为什么jobs/stages会有残余，是不是gc没有清理干净呢？从streaming tab来看，也有残留（2017/12/19 02:48:00），但是该streaming程序也是正常运行着的，最新的batch（2017/12/19 18:36:00）已经执行完毕。所以暂时ignore这个残余jobs/stages问题。也可能是残留batch（2017/12/19 02:48:00）执行过程中产生exception，但是没有抛出导致整个程序退出，而是卡在了残留batch里面。

@@ -20,13 +20,13 @@ modify_date: 2019-05-01 21:00:00 +08:00
 
 车过了虎门之后，12点半了吧？紧尿，塞车，没办法，忍到了东升服务区，顺带吃了点饼干。
 
-![放水](https://upload-images.jianshu.io/upload_images/2189341-bab6078d78f1263c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![放水](https://upload-images.jianshu.io/upload_images/2189341-bab6078d78f1263c.png)
 
-![饼干](https://upload-images.jianshu.io/upload_images/2189341-4025cd550f10df50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![饼干](https://upload-images.jianshu.io/upload_images/2189341-4025cd550f10df50.png)
 
 到家3点半了，放下奖牌和羊公仔，出发行山。先去了mashan，再去dadong。
 
-![mashan](https://upload-images.jianshu.io/upload_images/2189341-a2afffeb72544f0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![mashan](https://upload-images.jianshu.io/upload_images/2189341-a2afffeb72544f0e.png)
 
 全部处理完大概7点半了，天也开始黑了，laotou还打趣laoma，让她请吃饭，哈哈，中午因为我的塞车，午饭剩很多，就没有去外面了，回家喝了汤，吃了个油桃。
 

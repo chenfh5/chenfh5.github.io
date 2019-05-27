@@ -10,37 +10,37 @@ modify_date: 2019-04-30 18:00:00 +08:00
 
 周六早上10点左右到市民中心领物，由于没有打印领物单，所以找了附近的打印店好久，与一周后的汕马电子签名不同，深圳一个如此现代化的城市，深圳通，腾讯乘车码，深圳公安都能电子接入，不知道为什么领物单不能引入电子签名，这样既方便各方跑友，又环保易存。
 
-![市民中心](https://upload-images.jianshu.io/upload_images/2189341-35a79f2306b9a9d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![市民中心](https://upload-images.jianshu.io/upload_images/2189341-35a79f2306b9a9d6.png)
 
 打印后，领完物资，跟yuezhen和yingshen汇合，之后带她们放行李，然后吃了椰子鸡，之后去了人才公园。在人才公园涂抹了参赛包的红花油。之后分开，我回到楼下吃了斋面，买了水和红牛，之后上楼洗澡，跟chaoshen约好明早6点的车。
 
-![白铜雕塑《龙盈乾坤》](https://upload-images.jianshu.io/upload_images/2189341-48d27d4e0957c6dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![白铜雕塑《龙盈乾坤》](https://upload-images.jianshu.io/upload_images/2189341-48d27d4e0957c6dc.png)
 
-![人才公园](https://upload-images.jianshu.io/upload_images/2189341-1c434b9013fdcdbc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![人才公园](https://upload-images.jianshu.io/upload_images/2189341-1c434b9013fdcdbc.png)
 
 一夜无话，第二天起来吃了泡面，灌了水，喝了半罐红牛，之后穿衣服下楼跟chaoshen汇合。路上司机大哥也介绍他弟弟今天也跑，哈哈。630左右到现场，跟chaoshen拍照后就分开了，我上完厕所之后找了个空地脱掉保暖衣服，开始热身，因为想争取前排，不要像上马那样离起跑过远导致跑不开。
 
-![进场，偶遇武警](https://upload-images.jianshu.io/upload_images/2189341-8e4d0b7a7800eb70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![进场，偶遇武警](https://upload-images.jianshu.io/upload_images/2189341-8e4d0b7a7800eb70.png)
 
-![场内](https://upload-images.jianshu.io/upload_images/2189341-de00241be8ae9820.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![场内](https://upload-images.jianshu.io/upload_images/2189341-de00241be8ae9820.png)
 
 发枪后大概30秒左右就穿过起跑线，而且深南大道比较宽敞，一下子就跑开了，刚开始我也是以330的配速来跑的，感觉当天天气不错，有点小雨，就500一直跑到26k左右，之后左脚复发，有点跑不动了，开始掉速。之后虽然跑得不快，但是没有跑得辛苦一说，腿还是能迈开的。就这样晃一晃到了终点，穿过终点，领了完赛包，路上再领了饮料和香蕉。之后回到存包区取包，然后到拉伸区被人放松，然后ajian微信过来，说了说，之后自己找了个角落一边拉伸一边补充食物。差不多之后跟ajian汇合在大舞台，合照之后我们一起往地铁走。
 
-![赛后会场](https://upload-images.jianshu.io/upload_images/2189341-e368c74f88a29a51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![赛后会场](https://upload-images.jianshu.io/upload_images/2189341-e368c74f88a29a51.png)
 
-![终点，有人持花，持气球守候](https://upload-images.jianshu.io/upload_images/2189341-178b330903a01628.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![终点，有人持花，持气球守候](https://upload-images.jianshu.io/upload_images/2189341-178b330903a01628.png)
 
 到了楼下，我吃了个面条和牛奶，之后上楼洗澡，翻了一翻赛道照片，头发干了就睡了，晚上找了lawen吃牛蛙。
 
 至此，深马告一段落，总体来说还是一场值得参加的赛事，当然任何事情都是没有完美的，去适应它吧。
 
-![改革开放40周年](https://upload-images.jianshu.io/upload_images/2189341-dcacd9453983cc07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![改革开放40周年](https://upload-images.jianshu.io/upload_images/2189341-dcacd9453983cc07.png)
 
-![snapshot](https://upload-images.jianshu.io/upload_images/2189341-be563ff029c728ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![snapshot](https://upload-images.jianshu.io/upload_images/2189341-be563ff029c728ba.png)
 
-![深马medal](https://upload-images.jianshu.io/upload_images/2189341-318fec34b03ec27a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![深马medal](https://upload-images.jianshu.io/upload_images/2189341-318fec34b03ec27a.png)
 
-![深马pace](https://upload-images.jianshu.io/upload_images/2189341-24a5a6205fe7e064.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![深马pace](https://upload-images.jianshu.io/upload_images/2189341-24a5a6205fe7e064.png)
 
 # 汕头马拉松
 深马之后，左脚这次没有很痛，休了2天之后没有上马之后的刺痛感，一开始由于脚伤我是想放弃汕马的，而看公众号推送说奖牌竟然网上出售，当时看到就直接弃了，因为42k的坚持换不来一个稀有的奖牌。
@@ -48,37 +48,37 @@ modify_date: 2019-04-30 18:00:00 +08:00
 
 不知道为什么周五晚上睡不着，凌晨4点多还在微信上跟qishen瞎扯，翻滚了一小时，5点多起来坐地铁到深圳北，到汕头后坐组委会的班车到市区，然后领物，之后找了本地餐馆，点了蚝仔猪杂面，哈哈，这次比赛，完全没有之前备战的加碳水，周五晚上TB吃了好辣的海底捞，周六又吃了好多肉类，睡眠又惨淡。
 
-![组委会接送车](https://upload-images.jianshu.io/upload_images/2189341-227fd33570f4ae49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![组委会接送车](https://upload-images.jianshu.io/upload_images/2189341-227fd33570f4ae49.png)
 
-![潮汕高铁站](https://upload-images.jianshu.io/upload_images/2189341-f4b52d88677550d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![潮汕高铁站](https://upload-images.jianshu.io/upload_images/2189341-f4b52d88677550d9.png)
 
-![汕马路标](https://upload-images.jianshu.io/upload_images/2189341-77d404aff9dc2b0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![汕马路标](https://upload-images.jianshu.io/upload_images/2189341-77d404aff9dc2b0d.png)
 
-![蚝仔猪杂面](https://upload-images.jianshu.io/upload_images/2189341-abba989f29a447da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![蚝仔猪杂面](https://upload-images.jianshu.io/upload_images/2189341-abba989f29a447da.png)
 
-![跟xiaoge又不期而遇](https://upload-images.jianshu.io/upload_images/2189341-89228c8d7df66d3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![跟xiaoge又不期而遇](https://upload-images.jianshu.io/upload_images/2189341-89228c8d7df66d3e.png)
 
 吃完到酒店，房间还没收拾空出来，就把行李寄存在前台，之后坐车去了汕头大学逛逛，毕业三年了，毕业之后没有独自回去过或者这么仔细，漫无目的的逛过校园。
 
 汕大给我的感觉还是很现代化的，当然里面的校道，青协让我思绪又回到了匆匆的大学时光。汕大正如其名，有水，有山，有人，有氛围。一下午过去，坐在有点膈屁股的草地，看着人来人往，脑袋空空，感觉还蛮好，晚上约了xiaoge和ajian吃饭，坐上回程的车，窗外也是车水马龙，川流不息。
 
-![汕大校门](https://upload-images.jianshu.io/upload_images/2189341-539351eba62e3156.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![汕大校门](https://upload-images.jianshu.io/upload_images/2189341-539351eba62e3156.png)
 
-![汕大新体育馆](https://upload-images.jianshu.io/upload_images/2189341-0ac7f345bbc649e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![汕大新体育馆](https://upload-images.jianshu.io/upload_images/2189341-0ac7f345bbc649e0.png)
 
-![《建立自我，追求无我》雕塑](https://upload-images.jianshu.io/upload_images/2189341-69aa4e99b96a03c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![《建立自我，追求无我》雕塑](https://upload-images.jianshu.io/upload_images/2189341-69aa4e99b96a03c2.png)
 
-![周末校园](https://upload-images.jianshu.io/upload_images/2189341-5967d46ef62e8312.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![周末校园](https://upload-images.jianshu.io/upload_images/2189341-5967d46ef62e8312.png)
 
-![神似的校道](https://upload-images.jianshu.io/upload_images/2189341-812d548c07c22a75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![神似的校道](https://upload-images.jianshu.io/upload_images/2189341-812d548c07c22a75.png)
 
 到了酒店，放下行李，洗澡，换衣服，ajian此时还在领物，我跟xiaoge去找了饭店，ajian稍后就到了。介绍一番之后开始进食，饭后买了水果和明早的早餐。
 
-![时值冬至，附赠汤圆](https://upload-images.jianshu.io/upload_images/2189341-9983dc35f0e53f07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![时值冬至，附赠汤圆](https://upload-images.jianshu.io/upload_images/2189341-9983dc35f0e53f07.png)
 
-![川西八宝茶，跟上次兰马喝的三炮台类似，哈哈](https://upload-images.jianshu.io/upload_images/2189341-7c4f0530e0e37e60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![川西八宝茶，跟上次兰马喝的三炮台类似，哈哈](https://upload-images.jianshu.io/upload_images/2189341-7c4f0530e0e37e60.png)
 
-![酸菜鱼](https://upload-images.jianshu.io/upload_images/2189341-7e3b393d8112557f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![酸菜鱼](https://upload-images.jianshu.io/upload_images/2189341-7e3b393d8112557f.png)
 
 第二天早上，由于住得比较近，天又下雨，就没有存包了，披着雨衣就往外走，到了检录区，找了路人帮我们拍照，之后开始拉伸，不久之后就发枪了，一开始也是以330的配速跑的，到了8k左右，在骑楼段，观众实在太热情了，好多小学生，好多小姐姐，配速一下就到445了，幸好这段不算很长，不然就被观众拉爆了哈哈。之后上礐石大桥，哇，一上桥，两旁都是雾，头顶是直升机，那感觉还是很好的，全方位的feeling。大桥往返之后回到这边，继续跑，之后就是半程终点，然后又一个大上坡。。继续跑，快到这段的尽头，是新津河大桥。至此，有三桥了，就差三隧。
 
@@ -101,8 +101,8 @@ modify_date: 2019-04-30 18:00:00 +08:00
 
 如果明年还有机会，会怎么跑？汕马3桥还是蛮恐怖的，也可能跟我的状态有关。明年试试就近的别的地区的马拉松，跑一场马拉松，领略一座城市的风土人情。
 
-![snapshot](https://upload-images.jianshu.io/upload_images/2189341-9de81611547209fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![snapshot](https://upload-images.jianshu.io/upload_images/2189341-9de81611547209fa.png)
 
-![汕马medal](https://upload-images.jianshu.io/upload_images/2189341-b2d655b56e8678ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![汕马medal](https://upload-images.jianshu.io/upload_images/2189341-b2d655b56e8678ff.png)
 
-![汕马Pace](https://upload-images.jianshu.io/upload_images/2189341-f3f6ef3601eb4cc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![汕马Pace](https://upload-images.jianshu.io/upload_images/2189341-f3f6ef3601eb4cc1.png)

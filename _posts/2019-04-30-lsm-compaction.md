@@ -8,11 +8,11 @@ modify_date: 2019-04-30 18:00:00 +08:00
 # Overview
 Compaction operations are expensive in terms of CPU, memory, and Disk I/O，而由于immutable特质，该操作在LSM架构上有必不可少。
 
-![Log Structured Merge (LSM)](https://upload-images.jianshu.io/upload_images/2189341-5b014241c92f260f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Log Structured Merge (LSM)](https://upload-images.jianshu.io/upload_images/2189341-5b014241c92f260f.png)
 
 data过来之后会写到memory table (MemTable)，当mem满了之后，会flush到disk形成不可变的immutable Sorted String Table (SSTable)。当SSTable太多，os所打开的文件句柄也会过多，所以此时需要将多个同质的SSTable`合并`成一个SSTable。
 
-![leveldb architecture](https://upload-images.jianshu.io/upload_images/2189341-461efda3f623417f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![leveldb architecture](https://upload-images.jianshu.io/upload_images/2189341-461efda3f623417f.png)
 
 ----
 # Amplification
@@ -26,7 +26,7 @@ data过来之后会写到memory table (MemTable)，当mem满了之后，会flush
 - 每一个tiers的单片大小逐渐变大，但是每一个tiers的sstables数量一致
 - 如果某一个tier满了（即sstables数量达到阈值）就会进行compaction，从而将该tier的所有数据merge为一个然后丢给下一个tier作为下一个tier的一个sstable。而在这个merge的过程，会copy一份原数据snapshot用于merge，merge之后再删除
 
-![tiered (num same，size grow)](https://upload-images.jianshu.io/upload_images/2189341-9441654244c9804f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![tiered (num same，size grow)](https://upload-images.jianshu.io/upload_images/2189341-9441654244c9804f.png)
 
 ----
 # Leveled Compaction
@@ -34,16 +34,16 @@ data过来之后会写到memory table (MemTable)，当mem满了之后，会flush
 - 每一个tier里面的 sstable大小都是一致的，区别是每一个tier的sstable数量是逐渐变大的（一个数量级）
 - tier1里面的sstables会跟tier2的sstables一起进行merge操作，最终在tier2（量大者）上形成一个有序的sstable
 
-![leveled (num grow，size same)](https://upload-images.jianshu.io/upload_images/2189341-57007c45481c9f37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![leveled (num grow，size same)](https://upload-images.jianshu.io/upload_images/2189341-57007c45481c9f37.png)
 
 ----
 # Summary
-![Size-tiered Compaction vs. Leveled Compaction](https://upload-images.jianshu.io/upload_images/2189341-85660f689ed4be33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Size-tiered Compaction vs. Leveled Compaction](https://upload-images.jianshu.io/upload_images/2189341-85660f689ed4be33.png)
 
 - data in one SSTable which is later modified or deleted in another SSTable wastes space as both tables are present in the system
 - when data is split across many SSTables, read requests are processed slower as many SSTables need to be read
 
-![Scylla compaction summary](https://upload-images.jianshu.io/upload_images/2189341-034845b10379054b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Scylla compaction summary](https://upload-images.jianshu.io/upload_images/2189341-034845b10379054b.png)
 
 ----
 # Lucene Merge Policy

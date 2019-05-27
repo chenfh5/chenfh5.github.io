@@ -39,7 +39,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 ----
 # 2. 大型网站架构技术一览
 
-![网站系统架构层次](http://upload-images.jianshu.io/upload_images/2189341-b133c32aead25cec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![网站系统架构层次](http://upload-images.jianshu.io/upload_images/2189341-b133c32aead25cec.png)
 
 ### 2.1 前端架构
 前端指用户请求到达网站应用服务器之前经历的环节，通常不包含网站业务逻辑，不处理动态内容。
@@ -175,7 +175,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 ### 3.1 单机网站：初始阶段的网站架构
 小型网站最开始没有太多人访问，只需要一台服务器就绰绰有余，应用程序、数据库、文件等所有资源都在一台服务器上（于小型博客类似），常见的[LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle))(Linux+apache+mysql+php)架构。
 
-![单机网站架构](http://upload-images.jianshu.io/upload_images/2189341-addbd7ed8958c3b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![单机网站架构](http://upload-images.jianshu.io/upload_images/2189341-addbd7ed8958c3b5.png)
 
 ### 3.2 单机负载告警，应用服务与数据服务分离
 随着网站业务的发展，一台服务器逐渐不能满足需求。越来越多的用户访问导致性能越来越差，越来越多的数据导致存储空间不足。这时就需要将`应用`和`数据`分离。应用和数据分离后整个网站使用3台服务器：`应用服务器`、`文件服务器`和`数据库服务器`。这3台服务器对`硬件资源`的要求各不相同。
@@ -183,7 +183,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 > - 数据库服务器需要快速磁盘`检索`和数据缓存，因此需要更快的`磁盘`和更大的`内存`
 > - 文件服务器需要存储大量用户上传的文件，因此需要更大的`硬盘`
 
-![应用与数据服务器分离架构](http://upload-images.jianshu.io/upload_images/2189341-57f4d97f81b917ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![应用与数据服务器分离架构](http://upload-images.jianshu.io/upload_images/2189341-57f4d97f81b917ff.png)
 
 应用和数据分离后，**不同特性的服务器承担不同的服务角色**，网站的并发处理能力和数据存储空间得到了很大改善，支持网站业务进一步发展。
 但是随着用户逐渐增多，网站又一次面临挑战：`数据库压力`太大导致访问延迟，进而影响整个网站的性能，用户体验受到影响。这时需要对网站架构进一步优化。
@@ -196,7 +196,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 > - 本地缓存的访问速度更快一些，但是受应用服务器内存限制，其缓存数据量有限，而且会出现和应用程序争用内存的情况
 > - 远程分布式缓存可以使用集群的方式，部署大内存的服务器作为专门的缓存服务器，可以在理论上做到不受内存容量限制的缓存服务
 
-![应用服务器热点数据缓存架构](http://upload-images.jianshu.io/upload_images/2189341-e3beebe7fcb95a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![应用服务器热点数据缓存架构](http://upload-images.jianshu.io/upload_images/2189341-e3beebe7fcb95a15.png)
 
 使用缓存后，数据访问压力得到有效缓解（大部分request被cache拦截了，不会再深入到DB中检索），但是单一应用服务器能够处理的`请求连接`有限，在网站访问高峰期，`应用服务器`成为整个网站的瓶颈。
 
@@ -206,7 +206,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 对网站架构而言，**只要能通过增加一台服务器的方式来改善`负载压力`，就可以以同样的方式持续增加服务器不断改善`系统性能`**，从而实现系统的**可伸缩性**。
 应用服务器实现集群是网站`可伸缩架构`设计中较为简单成熟的一种。
 
-![应用服务器集群的可伸缩架构](http://upload-images.jianshu.io/upload_images/2189341-57f38825a571f11f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![应用服务器集群的可伸缩架构](http://upload-images.jianshu.io/upload_images/2189341-57f38825a571f11f.png)
 
 通过`负载均衡`([Nginx](http://www.cnblogs.com/liqiu/p/3140329.html))调度服务器，可以将来自用户浏览器的访问请求分发到应用服务器集群中的`任何一台`服务器上，如果有更多用户，就在集群中加入更多的应用服务器，使应用服务器的压力不再成为整个网站的瓶颈。
 
@@ -214,7 +214,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 网站在使用缓存后，使对大部分数据`读操作`访问都可以不走数据库就能完成，但是仍有一部分读操作（缓存访问不命中、缓存过期）和全部的`写操作`都需要访问数据库。
 在网站的用户达到一定规模后，`数据库`因为负载压力过高而成为网站的瓶颈。 目前大部分的主流数据库都提供[主从热备](http://www.cnblogs.com/shuidao/p/3551238.html)功能，通过配置两台数据库主从关系，可以将一台数据库服务器的数据更新同步到另一台服务器上。网站利用数据库的这一功能，实现数据库**读写分离**，从而改善数据库负载压力，即**主写从读，然后主从同步复制**。
 
-![数据库读写分离架构](http://upload-images.jianshu.io/upload_images/2189341-c65649cb57a90fe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![数据库读写分离架构](http://upload-images.jianshu.io/upload_images/2189341-c65649cb57a90fe2.png)
 
 应用服务器在写数据的时候，访问`主数据库`，主数据库通过`主从复制机制`将数据更新同步到`从数据库`，这样当应用服务器读数据的时候，就可以通过从数据库获得数据。
 为了便于应用程序访问读写分离后的数据库，通常在应用服务器端使用专门的[数据访问模块](http://zuiyanwangyue.iteye.com/blog/347517)，使数据库读写分离对应用透明。
@@ -223,7 +223,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 ### 3.6 使用反向代理和CDN加速网站响应
 随着网站业务不断发展，用户规模越来越大，由于国内复杂的网络环境，不同地区的用户访问网站时，访问速度有时候差别很大。有研究表明，网站`访问延迟`和`用户流失率`正相关，网站访问越慢，用户越容易失去耐心而离开。为了提供更好的用户体验，留住用户，网站需要加速网站访问速度。主要手段有使用CDN和[反向代理](https://mp.weixin.qq.com/s/uTe0lpFOJdK0gcc3XmG74A)。
 
-![网站前端快速响应架构](http://upload-images.jianshu.io/upload_images/2189341-a3c54f2ff6545362.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![网站前端快速响应架构](http://upload-images.jianshu.io/upload_images/2189341-a3c54f2ff6545362.png)
 
 CDN 和反向代理的基本原理都是缓存，
 > - CDN 部署在网络提供商的机房，使用户在请求网站服务时，可以从距离自己最近的`网络提供商`机房获取数据
@@ -235,7 +235,7 @@ CDN 和反向代理的基本原理都是缓存，
 任何强大的`单一服务器`都满足不了大型网站持续增长的业务需求。
 `数据库`经过**读写分离**后，从一台服务器拆分成两台服务器，但是随着网站业务的发展依然不能满足需求，这时需要使用`分布式数据库`。`文件系统`也一样，需要使用`分布式文件系统`。
 
-![分布式文件、数据库架构](http://upload-images.jianshu.io/upload_images/2189341-f4ab805027558ca9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![分布式文件、数据库架构](http://upload-images.jianshu.io/upload_images/2189341-f4ab805027558ca9.png)
 
 分布式数据库是网站数据库拆分的最后手段，只有在单表数据规模非常庞大的时候才使用。不到不得已时，网站更常用的数据库拆分手段是**业务分库**，将不同业务的数据部署在不同的物理服务器上（[分库分表](https://tech.meituan.com/dianping_order_db_sharding.html)）。
 > - 分布式文件系统[HDFS](https://hadoop.apache.org/docs/r1.0.4/cn/hdfs_design.html)
@@ -244,7 +244,7 @@ CDN 和反向代理的基本原理都是缓存，
 ### 3.8 弥补关系型数据库的不足，使用NoSQL和搜索引擎
 随着网站业务越来越复杂，对`数据存储`和`检索`的需求也越来越复杂，网站需要采用一些**非关系数据库**技术如NoSQL和非数据库查询技术如搜索引擎。
 
-![advanced data access架构](http://upload-images.jianshu.io/upload_images/2189341-dffa2bfe6f0e8e5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![advanced data access架构](http://upload-images.jianshu.io/upload_images/2189341-dffa2bfe6f0e8e5c.png)
 
 [NoSQL](http://blog.csdn.net/xlgen157387/article/details/47908797)和[搜索引擎](https://zhuanlan.zhihu.com/p/33304359)都是源自互联网的技术手段，对可伸缩的分布式特性具有更好的支持。应用服务器则通过一个统一数据访问模块访问各种数据，减轻应用程序管理诸多数据源的麻烦。
 
@@ -252,13 +252,13 @@ CDN 和反向代理的基本原理都是缓存，
 大型网站为了应对日益复杂的业务场景，通过使用分而治之的手段**将整个网站业务分成不同的产品线**。如大型购物交易网站都会将首页、商铺、订单、买家、卖家等拆分成不同的产品线，分归不同的业务团队负责。
 具体到技术上，也会根据`产品线`划分，**将一个网站拆分成许多不同的应用，每个应用独立部署**。应用之间可以通过一个超链接建立关系（在首页上的导航链接每个都指向不同的应用地址），也可以通过[消息队列](https://www.jianshu.com/p/689ce4205021)进行数据分发，当然最多的还是通过访问同一个数据存储系统来构成一个关联的完整系统。
 
-![业务拆分架构](http://upload-images.jianshu.io/upload_images/2189341-61b3aa28bb326cc5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![业务拆分架构](http://upload-images.jianshu.io/upload_images/2189341-61b3aa28bb326cc5.png)
 
 ### 3.10 分布式服务调用
 随着业务`拆分`得越来越小，存储系统越来越庞大，应用系统的整体复杂度呈指数级增加，`部署维护`越来越困难。由于所有应用要和所有数据库系统连接，在数万台服务器规模的网站中，这些连接的数目是服务器规模的平方，导致`数据库连接资源`不足，[拒绝服务](https://en.wikipedia.org/wiki/Denial-of-service_attack)。
 既然每一个应用系统都需要执行许多相同的业务操作，比如用户管理、商品管理、订单管理等，那么可以将这些`共用的业务`提取出来，独立部署。由这些`可复用`的业务连接数据库，提供共用业务服务，而应用系统只需要管理用户界面，通过[分布式服务调用](https://my.oschina.net/guoenzhou/blog/504987)共用业务服务完成具体业务操作。
 
-![分布式服务调用架构](http://upload-images.jianshu.io/upload_images/2189341-9572549391c8d0f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![分布式服务调用架构](http://upload-images.jianshu.io/upload_images/2189341-9572549391c8d0f7.png)
 
 大型网站的架构演化到这里，基本上大多数的技术问题都得以解决，诸如**跨数据中心的实时数据同步**、事务特性支持和具体网站业务相关的问题也都可以通过`组合改进`现有技术架构解决。
 在以上十个架构组织当中，有些单个的架构优化之路就很长，如果再多个组合起来，那么模块的兼容耦合衔接都会有不少的challenge。
@@ -267,7 +267,7 @@ CDN 和反向代理的基本原理都是缓存，
 # 大数据系统的架构
 TODO
 
-![大数据处理的关键层次架构](http://upload-images.jianshu.io/upload_images/2189341-89e07b662135a17a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![大数据处理的关键层次架构](http://upload-images.jianshu.io/upload_images/2189341-89e07b662135a17a.png)
 
 > [The Hadoop Ecosystem Table](https://hadoopecosystemtable.github.io/)
 

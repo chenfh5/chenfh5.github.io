@@ -9,9 +9,9 @@ modify_date:
 
 最近在部署webserver，同一个应用(生产者)部署在3个机器上，3个机器都启用了Celery来启动定时任务，执行文件的增删。
 
-![celery workflow](https://upload-images.jianshu.io/upload_images/2189341-52774c9a5d1d7eda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![celery workflow](https://upload-images.jianshu.io/upload_images/2189341-52774c9a5d1d7eda.png)
 
-![application SPF](https://upload-images.jianshu.io/upload_images/2189341-93d9d0df924f7b25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![application SPF](https://upload-images.jianshu.io/upload_images/2189341-93d9d0df924f7b25.png)
 
 可以看到在mq和celery worker阶段都可以做到高可用。但是在user application阶段，存在single point failure的情况，如果单点故障，定时任务就发送不到broker了。
 
@@ -35,7 +35,7 @@ modify_date:
 其中分布式锁已经有了一个[celery-once](https://github.com/cameronmaske/celery-once)，[celery-singleton](https://github.com/steinitzu/celery-singleton)的实现。
 
 # With Unique Task
-![celery worker with unique task](https://upload-images.jianshu.io/upload_images/2189341-81d1a0a97a4cf847.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![celery worker with unique task](https://upload-images.jianshu.io/upload_images/2189341-81d1a0a97a4cf847.png)
 
 # Reference
 - [Is it possible to skip delegating a celery task if the params and the task name is already queued in the server?](https://stackoverflow.com/questions/45107418/is-it-possible-to-skip-delegating-a-celery-task-if-the-params-and-the-task-name)

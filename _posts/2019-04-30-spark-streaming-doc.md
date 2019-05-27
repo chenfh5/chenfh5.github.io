@@ -11,17 +11,17 @@ modify_date: 2019-04-30 18:00:00 +08:00
 # Overview
 Spark Streaming（下称streaming）是Spark core的拓展，一个易扩展、高吞吐、高容错的流式数据处理系统。
 
-![streaming-arch](http://upload-images.jianshu.io/upload_images/2189341-fa0bca34e7c64c2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![streaming-arch](http://upload-images.jianshu.io/upload_images/2189341-fa0bca34e7c64c2f.png)
 
 streaming接收输入数据（kafka等）然后根据设置的处理时长batch interval将其***切割***为一个个的小数据集，然后对小数据集进行spark core/sql/mllib的操作，最后将处理后的小数据集输出。
 
-![streaming-flow](http://upload-images.jianshu.io/upload_images/2189341-1200e1d61c5e6a52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![streaming-flow](http://upload-images.jianshu.io/upload_images/2189341-1200e1d61c5e6a52.png)
 
 streaming具有一个高度抽象概念叫离散化的流（即DStream），代表了一块连续的数据流。
 > A DStream is represented as a sequence of RDDs.
 
 # A Quick Example
-![NetworkWordCount.scala](http://upload-images.jianshu.io/upload_images/2189341-03f2841ae9c26349.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![NetworkWordCount.scala](http://upload-images.jianshu.io/upload_images/2189341-03f2841ae9c26349.png)
 
 # Basic Concepts
 ## Linking
@@ -76,7 +76,7 @@ cogroup | DStream(k1, v1) join DStream(k1, v2) = DStream(k1, Seq[v1], Seq[v2])
 *transform* | 作用于DStream里面的每一个RDD
 *windows* | 基于窗宽的窗口函数
 
-![streaming-dstream-window](http://upload-images.jianshu.io/upload_images/2189341-bf0d6e5848d73960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![streaming-dstream-window](http://upload-images.jianshu.io/upload_images/2189341-bf0d6e5848d73960.png)
 
 ---
 ---
@@ -88,7 +88,7 @@ cogroup | DStream(k1, v1) join DStream(k1, v2) = DStream(k1, Seq[v1], Seq[v2])
   - event time，即事件发生时间，如该日志产生的时间
   - process time，即处理事件的实际时间，一般是Streaming程序当前batch的运行时间
 
-![时序](http://upload-images.jianshu.io/upload_images/2189341-9fa9d0dcfd370348.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![时序](http://upload-images.jianshu.io/upload_images/2189341-9fa9d0dcfd370348.png)
 
 
 上图time1, time2, time3是process time，图中方块中的数字代表这个event time。可能由于网络抖动导致部分机器的日志收集产生了延迟，在time3的batch中包含了event time为2的日志。kafka中不同partition的消息也是无序的，在实时处理过程中也就产生了两个问题，
@@ -109,7 +109,7 @@ windowedAvgSignalDF1 = eventsDF
                        .count()
 ```
 
-![windowedAvgSignalDF1](http://upload-images.jianshu.io/upload_images/2189341-1bddb6e63713510f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![windowedAvgSignalDF1](http://upload-images.jianshu.io/upload_images/2189341-1bddb6e63713510f.png)
 
 更进一步要求，每5分钟统计过去10分钟内所有设备产生日志的条数，也是按照event time聚合，
 ```
@@ -118,17 +118,17 @@ windowedAvgSignalDF2 = eventsDF
                        .count()
 ```
 
-![windowedAvgSignalDF2](http://upload-images.jianshu.io/upload_images/2189341-ecc10891c069e294.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![windowedAvgSignalDF2](http://upload-images.jianshu.io/upload_images/2189341-ecc10891c069e294.png)
 
 如果一条日志因为网络原因迟到了怎么办？Structured Streaming还是会将其统计到属于它的分组里面。
 
-![windowedAvgSignalDF3_delay](http://upload-images.jianshu.io/upload_images/2189341-e31860f9ef209a65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![windowedAvgSignalDF3_delay](http://upload-images.jianshu.io/upload_images/2189341-e31860f9ef209a65.png)
 
 上面强大的有状态功能是通过Spark Sql内部维护一个高容错的中间状态存储，key-value pairs，key就是对应分组，value就是对应每次增量统计后的一个聚合结果。每次增量统计，就对应key-value的一个新版本，状态就从旧版本迁移到新版本，所以才认为是有状态的。
 
 有状态的数据存储在内存中是不可靠的，spark sql内部使用write ahead log(WAL, 预写式日志)，然后间断的进行checkpoint。如果系统在某个时间点上crash了，就从最近的checkpoint点恢复，再开始使用WAL进行重放replay。checkpoint的点更新了以后，才将WAL清空clean，然后重新累积WAL，再flush到checkpoint，再clean（类似于es的translog）。
 
-![WAL](http://upload-images.jianshu.io/upload_images/2189341-a4ffa36c2a360983.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![WAL](http://upload-images.jianshu.io/upload_images/2189341-a4ffa36c2a360983.png)
 
 当然，streaming的数据源是一个流，这个数据是无限的，为了资源和性能考虑，只能保存有限的状态。即落后多久以后的数据，即便来了，系统也不要了，watermarking概念就是用来定义这个等待时间。例如，如果系统最大延迟是10分钟，意味着event time落后process time 10分钟内的日志会被拿来使用；如果超出10分钟，该日志就会被丢弃。如现在process time = 12:33，那么12:23之前的key-value pair的状态就不会再有改变，也就可以不用维护其状态了。
 ```
@@ -138,7 +138,7 @@ windowedAvgSignalDF4 = eventsDF
                        .count()
 ```
 
-![windowedAvgSignalDF4_waterMark](http://upload-images.jianshu.io/upload_images/2189341-d99d474c15d6636c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![windowedAvgSignalDF4_waterMark](http://upload-images.jianshu.io/upload_images/2189341-d99d474c15d6636c.png)
 
 x轴是process time，y轴是event time。然后有一条动态的水位线，如果在水位线下面的日志，Streaming系统就丢弃。
 
@@ -157,16 +157,16 @@ saveAsHadoopFiles | 保存为hdfs文件
 
 其中foreachRDD常用于写DStream内容到外部DB中，需要用到网络连接，示例如下，
 
-![errorExample](http://upload-images.jianshu.io/upload_images/2189341-88b1f7e0dcf334b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![errorExample](http://upload-images.jianshu.io/upload_images/2189341-88b1f7e0dcf334b2.png)
 上面的是错误实例，因为connection产生在driver，但connection不能序列化到executor，所以`connection.send(record)`报错。
 
-![高消耗方式](http://upload-images.jianshu.io/upload_images/2189341-ff0eccc3828bd6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![高消耗方式](http://upload-images.jianshu.io/upload_images/2189341-ff0eccc3828bd6ed.png)
 上面是不推荐方式，因为需要为DStream里面的每一个元素都产生和销毁connection，而产生和销毁connection是昂贵的操作。
 
-![推荐方式1](http://upload-images.jianshu.io/upload_images/2189341-9c508a34c17a2300.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![推荐方式1](http://upload-images.jianshu.io/upload_images/2189341-9c508a34c17a2300.png)
 上面的方式，为每个rdd的partition产生一个connection，该connection产生于executor，可以用于send数据。
 
-![更推荐方式](http://upload-images.jianshu.io/upload_images/2189341-86682f74104a79ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![更推荐方式](http://upload-images.jianshu.io/upload_images/2189341-86682f74104a79ef.png)
 上面的方式，有别于推荐方式1，利用连接池概念，每一个batch interval都可以重复利用这些connection（后续的每个batch都会利用该连接池，而非后续batch一直new connection下去）。连接池要求懒加载和设置超时，具体可以参考这个[stackoverflow answer](https://stackoverflow.com/questions/40015777/how-to-perform-one-operation-on-each-executor-once-in-spark)。
 
 注意，
@@ -195,7 +195,7 @@ DStream.persist()可以持久化DStream里面的每一个RDD。其中`reduceByWi
   1. 设置cp目录（用于带状态转换算子）
   2. 设置functionToCreateContext（用于driver恢复）
 
-![cp_driver_recovery_func](http://upload-images.jianshu.io/upload_images/2189341-8ba2a0b8d31291a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![cp_driver_recovery_func](http://upload-images.jianshu.io/upload_images/2189341-8ba2a0b8d31291a2.png)
 
 cp的间隔时间需要谨慎设置，太频繁会影响性能；相反太久会导致lineage链和task size太大。`dstream.checkpoint(checkpointInterval)`，一般是窗宽的5到10倍比较好。
 
@@ -223,7 +223,7 @@ Streaming应用的部署
 > - Processing Time < Batch Interval 才算正常
 > - Scheduling Delay 越小越好
 
-![monitor ui.png](http://upload-images.jianshu.io/upload_images/2189341-cca30755f8d40939.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![monitor ui.png](http://upload-images.jianshu.io/upload_images/2189341-cca30755f8d40939.png)
 
 - In **Input Rate** row, you can show and hide details of each input stream
 - **Scheduling Delay** is the time spent from when the collection of streaming jobs for a batch was submitted to when the first streaming job was started
@@ -233,7 +233,7 @@ Streaming应用的部署
 - *Active Batches* section presents waitingBatches and runningBatches together
 - *Completed Batches* section presents retained completed batches (using completedBatchUIData)
 
-![normal timer](http://upload-images.jianshu.io/upload_images/2189341-be3b819580890fcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![normal timer](http://upload-images.jianshu.io/upload_images/2189341-be3b819580890fcb.png)
 
 # Performance Tuning
 >- 减少每个batch interval的Processing Time
@@ -310,7 +310,7 @@ RDD是不可变、明确可重复计算的、分布式的数据集合。每个RD
 4. direct kafka api (1.3+)，所有接收到的kafka数据都是exactly once的
 为了避免丢失过去接收过的数据，Spark引入了WAL，负责将接收到的数据保存到cp/log中，有了WAL和reliable receiver，我们可以做到零数据丢失和exactly once语义
 
-![fault tolerant](http://upload-images.jianshu.io/upload_images/2189341-b4090a6bb2a0097b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![fault tolerant](http://upload-images.jianshu.io/upload_images/2189341-b4090a6bb2a0097b.png)
 
 ## Semantics of output operations
 output operation输出算子，如foreachRDD是at least once语义的，即同一份transformed数据在woker failure的情况下，可能会被多次写入外部DB系统，为了实现其exactly once语义，有以下做法，

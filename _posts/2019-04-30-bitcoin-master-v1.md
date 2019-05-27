@@ -74,13 +74,13 @@ modify_date: 2019-04-30 18:00:00 +08:00
 - 比特币的所有权是通过数字密钥、比特币地址和数字签名来确立的
 - 每笔比特币交易都需要一个有效的签名才会被存储在区块链。只有有效的数字密钥才能产生有效的数字签名，因此拥有比特币的密钥副本就拥有了该帐户的比特币控制权
 
-![椭圆曲线: y^2 mod p = (x^3 + 7) mod p](http://upload-images.jianshu.io/upload_images/2189341-98937f475b9b8826.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![椭圆曲线: y^2 mod p = (x^3 + 7) mod p](http://upload-images.jianshu.io/upload_images/2189341-98937f475b9b8826.png)
 
-![公钥K到比特币地址A](http://upload-images.jianshu.io/upload_images/2189341-d148188dddde07f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![公钥K到比特币地址A](http://upload-images.jianshu.io/upload_images/2189341-d148188dddde07f6.png)
 
-![Base58Check编码](http://upload-images.jianshu.io/upload_images/2189341-55a3a4a49f79a3ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Base58Check编码](http://upload-images.jianshu.io/upload_images/2189341-55a3a4a49f79a3ac.png)
 
-![key relation](http://upload-images.jianshu.io/upload_images/2189341-150ab89f252d9b0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![key relation](http://upload-images.jianshu.io/upload_images/2189341-150ab89f252d9b0d.png)
 
 - 私钥256bit，公钥520bit
 - 钱包是私钥的容器，可以包含多个私钥-公钥对。用户用这些私钥来签名交易，从而证明它们拥有交易的输出（也就是其中的比特币）。比特币是以交易输出的形式来储存在区块链中（通常记为vout或txout）
@@ -110,7 +110,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
   - 用户钱包节点，可以是全节点或SPV节点
   - 其他类型节点
 
-![扩展比特币网络的不同节点类型](http://upload-images.jianshu.io/upload_images/2189341-263863550074feb4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![扩展比特币网络的不同节点类型](http://upload-images.jianshu.io/upload_images/2189341-263863550074feb4.png)
 
 - 全节点通过检查整个链中在它之下的数千个区块来保证这个UTXO没有被支付，从而验证交易
 - SPV节点通过检查在其上面的区块将它压在下面的深度来验证交易
@@ -161,11 +161,11 @@ modify_date: 2019-04-30 18:00:00 +08:00
 - 带有短链的节点接纳了新的更长的链，被迫改变了原有对区块链的观点，这就叫做链的重新共识（一个新区块的诞生又工作量证明，其归入主链过程如果出现分叉，则还依赖于基于这个新区块进行下一轮新区快挖掘的速度）
 - 比特币将区块间隔设计为10分钟，是在更快速的交易确认和更低的分叉概率间作出的妥协
 
-![算力演进(https://bitinfocharts.com/zh/comparison/bitcoin-hashrate.html)](http://upload-images.jianshu.io/upload_images/2189341-064f2f3f093bf05e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![算力演进(https://bitinfocharts.com/zh/comparison/bitcoin-hashrate.html)](http://upload-images.jianshu.io/upload_images/2189341-064f2f3f093bf05e.png)
 
-![价格演进(https://bitinfocharts.com/zh/bitcoin)](http://upload-images.jianshu.io/upload_images/2189341-bb5224df59367985.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![价格演进(https://bitinfocharts.com/zh/bitcoin)](http://upload-images.jianshu.io/upload_images/2189341-bb5224df59367985.png)
 
-![最富有钱包地址(https://btc.com/stats/rich-list)](http://upload-images.jianshu.io/upload_images/2189341-6e0a90c1d513d81f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![最富有钱包地址(https://btc.com/stats/rich-list)](http://upload-images.jianshu.io/upload_images/2189341-6e0a90c1d513d81f.png)
 
 - 矿工连接到矿池服务器使用一个采矿协议比如Stratum (STM)或者 GetBlockTemplate (GBT)
 - P2Pool通过将矿池服务器的功能去中心化，实现一个并行的类似区块链的系统，名叫**份额链**

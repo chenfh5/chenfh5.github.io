@@ -11,22 +11,22 @@ modify_date: 2019-04-30 18:00:00 +08:00
 # Overview
 检索建议suggestion（补全completion和纠正correction）是提升用户搜索体验的一个重要功能，通过协助用户输入更精准的关键词，提高后续全文检索阶段文档匹配度。
 
-![检索关键词补全](http://upload-images.jianshu.io/upload_images/2189341-00aa4a9ec1db768f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![检索关键词补全](http://upload-images.jianshu.io/upload_images/2189341-00aa4a9ec1db768f.png)
 
-![检索关键词纠正](http://upload-images.jianshu.io/upload_images/2189341-c4b9edd807faeb3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![检索关键词纠正](http://upload-images.jianshu.io/upload_images/2189341-c4b9edd807faeb3c.png)
 
 ----
 # 补全功能
 在电商平台（淘宝、京东、Amazon等）上，检索建议补全可以帮助用户更准确、更迅速地定位到潜在购买商品。例如，用户输入`空气`，电商平台根据用户的历史行为(login user)或者平台总体推荐结果(non-login user)，给出有关`空气`的一系列检索关键词（如空气质量、空气刘海、空气清新剂等），该检索关键词可以是简体、繁体、全拼、首字母拼音等形式。下面使用es的[Completion Suggester](https://www.elastic.co/guide/en/elasticsearch/reference/6.1/search-suggesters-completion.html)来实现补全功能。
 
-![汉字补全](http://upload-images.jianshu.io/upload_images/2189341-1f5ec87665a0a60a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![汉字补全](http://upload-images.jianshu.io/upload_images/2189341-1f5ec87665a0a60a.png)
 
-![拼音补全](http://upload-images.jianshu.io/upload_images/2189341-7d71b543eaad1a7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![拼音补全](http://upload-images.jianshu.io/upload_images/2189341-7d71b543eaad1a7e.png)
 
 ### 整体架构
 架构模块组织如下，
 
-![检索建议补全架构](http://upload-images.jianshu.io/upload_images/2189341-eeb08e1c016f2e61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![检索建议补全架构](http://upload-images.jianshu.io/upload_images/2189341-eeb08e1c016f2e61.png)
 
 由三个模块，一个proxy，一条es总线组成。[code](https://github.com/chenfh5/test-spark-connect-es)将suggestion和normal隔离成2个index，不在normal mapping里加入suggestion，方便更好地管理和升级suggestion；也减轻normal es coordinator的压力。
 
@@ -71,7 +71,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 - Completion Suggester，[FST](http://www.cnblogs.com/LBSer/p/4119841.html)数据结构，类似Trie树，不用打开倒排，快速返回，前缀匹配
 - [Context Suggester](https://www.elastic.co/guide/en/elasticsearch/reference/6.1/suggester-context.html)，在Completion Suggester的基础上，用于filter和boost
 
-![query纠正](http://upload-images.jianshu.io/upload_images/2189341-7b88882730330cdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![query纠正](http://upload-images.jianshu.io/upload_images/2189341-7b88882730330cdd.png)
 
 ----
 # 存在问题

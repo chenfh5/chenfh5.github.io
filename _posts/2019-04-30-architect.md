@@ -17,17 +17,17 @@ modify_date: 2019-04-30 18:00:00 +08:00
 - 小伙子，你在做什么
 - 答曰搬砖
 
-![砖厂老板](http://upload-images.jianshu.io/upload_images/2189341-5e6e608350dca899.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![砖厂老板](http://upload-images.jianshu.io/upload_images/2189341-5e6e608350dca899.png)
 
 - 小伙子，你在做什么
 - 搭建一座高大雄伟的教堂
 
-![架构师](http://upload-images.jianshu.io/upload_images/2189341-6014fa4e9cc29f81.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![架构师](http://upload-images.jianshu.io/upload_images/2189341-6014fa4e9cc29f81.png)
 
 - 小伙子，你在做什么
 - 构建一座繁华而又美丽的城市
 
-![市长](http://upload-images.jianshu.io/upload_images/2189341-4490756d23ad821d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![市长](http://upload-images.jianshu.io/upload_images/2189341-4490756d23ad821d.png)
 
 ----
 ### 什么是架构师？
@@ -101,4 +101,4 @@ modify_date: 2019-04-30 18:00:00 +08:00
 #### 3.良好的沟通能力
 架构师不只是低头做技术，更需要协调指挥团队内的成员，也需要跨部门和产品、运营、项目经理等人员做及时有效的沟通，所以沟通能力是必不可少的。
 
-![Cool](http://upload-images.jianshu.io/upload_images/2189341-da58b135f4a9ea53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Cool](http://upload-images.jianshu.io/upload_images/2189341-da58b135f4a9ea53.png)

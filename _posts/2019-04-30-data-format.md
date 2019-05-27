@@ -52,7 +52,7 @@ Snappy | performs better than LZO, better choice for hot data | [yes?](http://bo
 - term index，tire树
 - term dictionary
 - [finite state transducers](http://www.cnblogs.com/LBSer/p/4119841.html)
-![FST](https://upload-images.jianshu.io/upload_images/2189341-2810f57a2b5ac601.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![FST](https://upload-images.jianshu.io/upload_images/2189341-2810f57a2b5ac601.png)
 - 维度字段上移到父文档里，而不用在每个子文档里重复存储，从而减少索引的尺寸
 - segment一个int就可以存储
 - Hyperloglog

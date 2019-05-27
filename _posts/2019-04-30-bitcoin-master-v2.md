@@ -18,7 +18,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 - 网络最大数量，2100万BTC
 
 
-![比特币核心架构](http://upload-images.jianshu.io/upload_images/2189341-c600e6409aacb4cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![比特币核心架构](http://upload-images.jianshu.io/upload_images/2189341-c600e6409aacb4cd.png)
 
 ### 区块结构
 - block size
@@ -40,7 +40,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
 - “闪电网络”是指路由支付通道网络的具体设计，现已由至少五个不同的开源团队实施。这些的独立实施是由“闪电技术基础”（BOLT）论文中描述的一组互通性标准进行协作
 - 闪电网络的原型实施已经由几个团队发布。现在，这些实现只能在testnet上运行，因为它们使用segwit，还没有在比特币区块主链（mainnet）上激活
 
-![Lightning Network](http://upload-images.jianshu.io/upload_images/2189341-d36a0ee09c0920f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Lightning Network](http://upload-images.jianshu.io/upload_images/2189341-d36a0ee09c0920f4.png)
 
 ### 隔离见证
 - 隔离见证（segwit）是一次比特币共识规则和网络协议的升级，其提议和实施将基于BIP-9 软分叉方案，目前（2017年中）尚待激活

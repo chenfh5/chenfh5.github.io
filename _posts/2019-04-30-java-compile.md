@@ -23,7 +23,7 @@ modify_date: 2019-04-30 18:00:00 +08:00
   - Java
   - Python
 
-![high/low level language](http://upload-images.jianshu.io/upload_images/2189341-aa4f19a04b27f612.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![high/low level language](http://upload-images.jianshu.io/upload_images/2189341-aa4f19a04b27f612.png)
 
 计算机只能对`数字`做运算，`符号、声音、图像`在计算机内部都要用`数字`表示，指令也不例外，上表中的机器语言完全由十六进制数字组成。
 

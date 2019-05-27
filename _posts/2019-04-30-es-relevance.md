@@ -33,7 +33,7 @@ full `AND` text `AND` search `AND` (elasticsearch `OR` lucene).
 - idf，该词出现在多少篇文档中（出现一次也算出现），`idf(t) = 1+  log((numDocs + 1)/(docFreq + 1))`
 - field-length norm，doc/field的文本长度，`norm(d) = 1 / √numTermsInDoc`
 
-![tfidf](http://upload-images.jianshu.io/upload_images/2189341-9b0ec6d4d8130b44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![tfidf](http://upload-images.jianshu.io/upload_images/2189341-9b0ec6d4d8130b44.png)
 
 ```
 //disable field-length norm可以减少index时候的计算量，加快index速度
@@ -55,7 +55,7 @@ PUT /my_index
 ##### Vector Space Model
 使得query与doc之间的相关性*可以比较*。
 
-![query与三文档的对比](http://upload-images.jianshu.io/upload_images/2189341-2cb004acbb11d8e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![query与三文档的对比](http://upload-images.jianshu.io/upload_images/2189341-2cb004acbb11d8e8.png)
 
 上图中，query = "happy hippopotamus"，权重分别是2, 5，
 doc1 = I am *happy* in summer.
@@ -294,7 +294,7 @@ GET /_search
 }
 ```
 
-![decay_function](http://upload-images.jianshu.io/upload_images/2189341-3d0178aeab647e56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![decay_function](http://upload-images.jianshu.io/upload_images/2189341-3d0178aeab647e56.png)
 
 ##### score combination
 - score_mode，function_score与function_score之间的相处方式，
@@ -345,7 +345,7 @@ PUT /my_index
 Best Match 25，发布于1994年，是调整相关性计算的第25次迭代。
 引入了**Term frequency saturation（词频饱和度)**，计算如下，
 
-![BM25.png](http://upload-images.jianshu.io/upload_images/2189341-671e0076a32246b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![BM25.png](http://upload-images.jianshu.io/upload_images/2189341-671e0076a32246b0.png)
 
 其中，
 - |D|：文档长度
@@ -354,9 +354,9 @@ Best Match 25，发布于1994年，是调整相关性计算的第25次迭代。
 - IDF = log((#Docs - #DocsHit + 0.5)/(#DocsHit + 0.5))
 - TF = query count in one doc
 
-![词频饱和度snapshot (blue)](http://upload-images.jianshu.io/upload_images/2189341-3828a6fb0cfaa1fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![词频饱和度snapshot (blue)](http://upload-images.jianshu.io/upload_images/2189341-3828a6fb0cfaa1fc.png)
 
-![Term frequency saturation for TF/IDF and BM25](http://upload-images.jianshu.io/upload_images/2189341-b74ccc848a4a0b96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Term frequency saturation for TF/IDF and BM25](http://upload-images.jianshu.io/upload_images/2189341-b74ccc848a4a0b96.png)
 
 ##### BM25F
 > http://www.cnblogs.com/bentuwuying/p/6730891.html

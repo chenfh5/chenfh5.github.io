@@ -21,7 +21,7 @@ Oozie是雅虎开源出来的一个出色的工作流，支持很多jobType，sp
 <version>5.1.0-SNAPSHOT</version>
 ```
 
-![Latest Submission](https://upload-images.jianshu.io/upload_images/2189341-1bf66f78b62782a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Latest Submission](https://upload-images.jianshu.io/upload_images/2189341-1bf66f78b62782a8.png)
 
 ----
 # Client
@@ -50,7 +50,7 @@ URL url = createURL(protocolVersion, collection, resource, params);
 sb.append(getBaseURLForVersion(protocolVersion));
 ```
 
-![CLI](https://upload-images.jianshu.io/upload_images/2189341-ec9399c4194c0880.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![CLI](https://upload-images.jianshu.io/upload_images/2189341-ec9399c4194c0880.png)
 
 ----
 # Server
@@ -60,7 +60,7 @@ sb.append(getBaseURLForVersion(protocolVersion));
 - server hold till shutdown hook
 - e.g.: `mapServlet(V0JobServlet.class, "/v0/job/*");`, `*`号就是Client的jobId，`v0`就是`protocolVersion`，job是字符串常量"job"
 
-![URL Mapping](https://upload-images.jianshu.io/upload_images/2189341-f99acd99acf6f9cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![URL Mapping](https://upload-images.jianshu.io/upload_images/2189341-f99acd99acf6f9cd.png)
 
 ----
 # shardlib
@@ -70,4 +70,4 @@ sb.append(getBaseURLForVersion(protocolVersion));
 
 将自定义的xxx.wf xml翻译成DAG，然后定时运行。
 
-![Actions Supported by Oozie](https://upload-images.jianshu.io/upload_images/2189341-0af055e9f5ee1e39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Actions Supported by Oozie](https://upload-images.jianshu.io/upload_images/2189341-0af055e9f5ee1e39.png)

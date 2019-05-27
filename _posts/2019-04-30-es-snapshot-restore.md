@@ -96,7 +96,7 @@ do
 done
 ```
 
-![insert docs](https://upload-images.jianshu.io/upload_images/2189341-2113b3fb86ee005c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![insert docs](https://upload-images.jianshu.io/upload_images/2189341-2113b3fb86ee005c.png)
 
 3. close index
 ```
@@ -106,7 +106,7 @@ curl -X POST "localhost:9200/customer/_close?pretty"
 4. restore
 因为之前我store了一次backup，当时backup只有1条doc，当插入1万条之后，close，然后restore，是以当时store的snapshot来恢复。
 
-![after restore](https://upload-images.jianshu.io/upload_images/2189341-81e3d9c54966069e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![after restore](https://upload-images.jianshu.io/upload_images/2189341-81e3d9c54966069e.png)
 
 5. reinsert
 ```
@@ -117,13 +117,13 @@ curl -X GET "localhost:9200/_search?pretty" -H 'Content-Type: application/json' 
     }
 }'
 ```
-![reinsert](https://upload-images.jianshu.io/upload_images/2189341-e00899316c9c074a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reinsert](https://upload-images.jianshu.io/upload_images/2189341-e00899316c9c074a.png)
 
 6. create snapshot_2
 
-![before](https://upload-images.jianshu.io/upload_images/2189341-caa17842c930549a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![before](https://upload-images.jianshu.io/upload_images/2189341-caa17842c930549a.png)
 
-![after](https://upload-images.jianshu.io/upload_images/2189341-9ff7516ddc60aa54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![after](https://upload-images.jianshu.io/upload_images/2189341-9ff7516ddc60aa54.png)
 
 7 close & restore
 
@@ -144,39 +144,39 @@ curl -X PUT "localhost:9200/_snapshot/my_hdfs_repository?pretty" -H 'Content-Typ
 ```
 如果在这一步出现异常，可以参考[这里](https://github.com/elastic/elasticsearch/issues/22156)。
 
-![create repo successed](https://upload-images.jianshu.io/upload_images/2189341-4160fe2a50235645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![create repo successed](https://upload-images.jianshu.io/upload_images/2189341-4160fe2a50235645.png)
 
 ## insert data
-![doc 10000](https://upload-images.jianshu.io/upload_images/2189341-802a2834ab28b162.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![doc 10000](https://upload-images.jianshu.io/upload_images/2189341-802a2834ab28b162.png)
 
 ## create hdfs snapshot
 ```
 curl -X PUT "localhost:9200/_snapshot/my_hdfs_repository/snapshot_hdfs_1?wait_for_completion=true&pretty"
 ```
-![access_control_exception](https://upload-images.jianshu.io/upload_images/2189341-faea66e6dd066368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![access_control_exception](https://upload-images.jianshu.io/upload_images/2189341-faea66e6dd066368.png)
 
 在`jvm.optiopns`添加插件的安全配置
-![fix access_control_exception](https://upload-images.jianshu.io/upload_images/2189341-2867874ad6b456f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![fix access_control_exception](https://upload-images.jianshu.io/upload_images/2189341-2867874ad6b456f1.png)
 
-![create snap successed](https://upload-images.jianshu.io/upload_images/2189341-4876eb09b8692f49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![create snap successed](https://upload-images.jianshu.io/upload_images/2189341-4876eb09b8692f49.png)
 
-![hdfs ls snapshot files](https://upload-images.jianshu.io/upload_images/2189341-98c18b69e64862c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![hdfs ls snapshot files](https://upload-images.jianshu.io/upload_images/2189341-98c18b69e64862c4.png)
 
 ## restore from hdfs
 1. 随意增加一些docs，使得与snapshot时的index有差异，便于观察restore效果。
 
-![doc 10000+](https://upload-images.jianshu.io/upload_images/2189341-a464c2d48ec5bf19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![doc 10000+](https://upload-images.jianshu.io/upload_images/2189341-a464c2d48ec5bf19.png)
 
 2. close index
 
-![doc index close](https://upload-images.jianshu.io/upload_images/2189341-f24f862cca97bf42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![doc index close](https://upload-images.jianshu.io/upload_images/2189341-f24f862cca97bf42.png)
 
 3. restore
 curl -X POST "localhost:9200/_snapshot/my_hdfs_repository/snapshot_hdfs_1/_restore?pretty"
 
-![restore successed](https://upload-images.jianshu.io/upload_images/2189341-83c2dd1f32b072e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![restore successed](https://upload-images.jianshu.io/upload_images/2189341-83c2dd1f32b072e0.png)
 
-![doc 10000](https://upload-images.jianshu.io/upload_images/2189341-33ca2698fdd77b6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![doc 10000](https://upload-images.jianshu.io/upload_images/2189341-33ca2698fdd77b6b.png)
 
 ----
 # Restoring to a different cluster
@@ -184,7 +184,7 @@ curl -X POST "localhost:9200/_snapshot/my_hdfs_repository/snapshot_hdfs_1/_resto
 ```
 curl -X GET "localhost:9201/_cat/indices?v"
 ```
-![clusterB initial](https://upload-images.jianshu.io/upload_images/2189341-46a3906783b1c043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![clusterB initial](https://upload-images.jianshu.io/upload_images/2189341-46a3906783b1c043.png)
 
 ## registering repository
 ```
@@ -199,14 +199,14 @@ curl -X PUT "localhost:9201/_snapshot/my_hdfs_repository?pretty" -H 'Content-Typ
 }'
 ```
 
-![registering using the same hdfs path with clusterA](https://upload-images.jianshu.io/upload_images/2189341-4ff78afb81500689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![registering using the same hdfs path with clusterA](https://upload-images.jianshu.io/upload_images/2189341-4ff78afb81500689.png)
 
 ## list snapshot
 ```
 curl -X GET "localhost:9201/_snapshot/my_hdfs_repository/*?pretty"
 ```
 
-![lists working snapshots](https://upload-images.jianshu.io/upload_images/2189341-f9744dc4b5535bbe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![lists working snapshots](https://upload-images.jianshu.io/upload_images/2189341-f9744dc4b5535bbe.png)
 
 
 ## starting restore
@@ -214,16 +214,16 @@ curl -X GET "localhost:9201/_snapshot/my_hdfs_repository/*?pretty"
 curl -X POST "localhost:9201/_snapshot/my_hdfs_repository/snapshot_hdfs_1/_restore?pretty"
 ```
 
-![restore successed](https://upload-images.jianshu.io/upload_images/2189341-44e340b0064c7ece.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![restore successed](https://upload-images.jianshu.io/upload_images/2189341-44e340b0064c7ece.png)
 
 ----
 # benchmark
 会用esrally将数据写入
 
-![before](https://upload-images.jianshu.io/upload_images/2189341-68c24710e32a1174.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![before](https://upload-images.jianshu.io/upload_images/2189341-68c24710e32a1174.png)
 
 ## snapshoting speed
-![hdfs before snapshot](https://upload-images.jianshu.io/upload_images/2189341-a90c827ed4c6681d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![hdfs before snapshot](https://upload-images.jianshu.io/upload_images/2189341-a90c827ed4c6681d.png)
 
 ```
 # backgroud running
@@ -238,11 +238,11 @@ curl -X PUT "XXX:9200/_snapshot/my_hdfs_repository/snapshot_hdfs_long_1" -H 'Con
 curl -X GET "XXX:9200/_snapshot/my_hdfs_repository/*?pretty"
 ```
 
-![in_progress](https://upload-images.jianshu.io/upload_images/2189341-cc646f4d3e5aa4a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![in_progress](https://upload-images.jianshu.io/upload_images/2189341-cc646f4d3e5aa4a0.png)
 
-![success](https://upload-images.jianshu.io/upload_images/2189341-407e3fd4b14e737b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![success](https://upload-images.jianshu.io/upload_images/2189341-407e3fd4b14e737b.png)
 
-![hdfs after snapshot](https://upload-images.jianshu.io/upload_images/2189341-56f8f1ac2c141c6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![hdfs after snapshot](https://upload-images.jianshu.io/upload_images/2189341-56f8f1ac2c141c6f.png)
 
 ## restoring speed
 ```
@@ -251,7 +251,7 @@ curl -X POST "XXX:9201/_snapshot/my_hdfs_repository/snapshot_hdfs_long_1/_restor
 date
 ```
 
-![after](https://upload-images.jianshu.io/upload_images/2189341-88a9afa52d141f07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![after](https://upload-images.jianshu.io/upload_images/2189341-88a9afa52d141f07.png)
 
 snapshoting耗时远比restoring高。
 
@@ -259,11 +259,11 @@ snapshoting耗时远比restoring高。
 # plugin auto route
 测试一下插件会不会自动路由，即是否需要在每一个节点（datanode，masternode等）都安装？还是只需要在整个es集群的其中一个node安装之后，该node就会将plugin自动路由安装到集群的其他node上？
 
-![health](https://upload-images.jianshu.io/upload_images/2189341-ad4ec44c537f8d88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![health](https://upload-images.jianshu.io/upload_images/2189341-ad4ec44c537f8d88.png)
 
-![nodes](https://upload-images.jianshu.io/upload_images/2189341-3206c93c7c569f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![nodes](https://upload-images.jianshu.io/upload_images/2189341-3206c93c7c569f0b.png)
 
-![plugins](https://upload-images.jianshu.io/upload_images/2189341-4e20bdfddaba7fba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![plugins](https://upload-images.jianshu.io/upload_images/2189341-4e20bdfddaba7fba.png)
 
 自动路由不可用。
 
@@ -271,9 +271,9 @@ snapshoting耗时远比restoring高。
 # other
 - 尝试snapshot更大的index，但是报错了，配置应该没有问题（因为小索引是snapshot成功的）
 
-![大索引snapshot失败](https://upload-images.jianshu.io/upload_images/2189341-e0774564dbda1d15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![大索引snapshot失败](https://upload-images.jianshu.io/upload_images/2189341-e0774564dbda1d15.png)
 
-![小索引snapshot成功](https://upload-images.jianshu.io/upload_images/2189341-beeab21135570709.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![小索引snapshot成功](https://upload-images.jianshu.io/upload_images/2189341-beeab21135570709.png)
 
 [Self-suppression not permitted](https://stackoverflow.com/questions/44490579/what-is-the-main-cause-of-self-suppression-not-permitted-in-spark)这个error应该是hadoop的DataNode剩余空间不够导致。
 
