@@ -67,3 +67,4 @@ data过来之后会写到memory table (MemTable)，当mem满了之后，会flush
 - [Dostoevsky: 一种更好的平衡 LSM 空间和性能的方式](https://www.jianshu.com/p/8fb8f2458253)
 - [SSTable compaction and compaction strategies](https://github.com/scylladb/scylla/wiki/SSTable-compaction-and-compaction-strategies/_edit)[New Page](https://github.com/scylladb/scylla/wiki/_new)
 - [elasticsearch index 之merge](https://tw.saowen.com/a/64d63bda6284038a96af74e5327f91570822dea2c206e1e43d1737542ad9549e)
+- [深入理解什么是LSM-Tree](https://mp.weixin.qq.com/s/UqpnHs7g5XZcQWDRXiyKyQ)
