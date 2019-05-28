@@ -5,7 +5,7 @@ key: 62
 modify_date:
 ---
 
-![distributed transaction](https://upload-images.jianshu.io/upload_images/2189341-97d1f69a283118b3.png)
+![distributed transaction](https://user-images.githubusercontent.com/8369671/58456330-7b75d080-8156-11e9-9f3c-d85608855570.png)
 
 # Reference
 - [来了！阿里开源分布式事务解决方案Fescar](https://www.jiqizhixin.com/articles/2019-01-25-27)
