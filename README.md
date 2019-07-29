@@ -10,7 +10,7 @@
    - change configuration to fit your style
    - add new article into `_post` directory
 6. bundle exec jekyll serve
-    - in project root
+    - change directory(cd) to project root
     - bundle exec jekyll serve --incremental
 
 7. push into master after confirmed
