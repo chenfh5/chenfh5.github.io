@@ -2,7 +2,7 @@
 [chenfh5 blog](https://chenfh5.github.io)
 
 # Quickstart
-1. fork [project]()
+1. fork [blog project](https://github.com/chenfh5/chenfh5.github.io)
 2. rename
 3. install [jekyll](https://jekyllrb.com/docs/)
 4. bundle install
@@ -11,8 +11,7 @@
    - add new article into `_post` directory
 6. bundle exec jekyll serve
     - change directory(cd) to project root
-    - bundle exec jekyll serve --incremental
-
+    - run `bundle exec jekyll serve --incremental`
 7. push into master after confirmed
 
 # Reference
