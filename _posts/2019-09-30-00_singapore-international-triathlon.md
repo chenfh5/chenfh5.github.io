@@ -135,4 +135,5 @@ key: 80
 ![transition](https://user-images.githubusercontent.com/8369671/65933080-c2483f80-e442-11e9-8a98-7514bedf036a.png)
 
 # Reference
-0. [SIT-2019-RACE-E-GUIDE-FINAL.pdf](https://github.com/chenfh5/chenfh5.github.io/files/3669252/SIT-2019-RACE-E-GUIDE-FINAL.pdf)
+0. [SIT-2019-RACE-E-GUIDE-FINAL](https://github.com/chenfh5/chenfh5.github.io/files/3669252/SIT-2019-RACE-E-GUIDE-FINAL.pdf)
+0. [官网](http://www.triathlon.sg/)
