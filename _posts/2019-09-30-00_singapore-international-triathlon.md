@@ -1,6 +1,6 @@
 ---
 title: 20190929新加坡国际铁人三项
-tags: mood
+tags: marathon
 key: 80
 ---
 
