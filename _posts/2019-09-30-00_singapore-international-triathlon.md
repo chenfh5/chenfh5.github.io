@@ -2,6 +2,12 @@
 title: 20190929新加坡国际铁人三项
 tags: marathon
 key: 80
+aside:
+  toc: true
+article_header:
+  type: cover
+  image:
+    src: https://user-images.githubusercontent.com/8369671/66882489-25b69d80-effd-11e9-8165-d411fa0b6b0a.jpeg
 ---
 
 # Overview
