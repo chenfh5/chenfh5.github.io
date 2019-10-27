@@ -12,9 +12,9 @@ article_header:
 ---
 
 # Overview
-之前一直使用scala写spark pipeline，这次试着使用[PySpark](https://spark.apache.org/docs/latest/api/python/index.html)来模拟，主要希望熟悉一下Python的自动化测试的文件组织、mock用法、以及三种verification方法，还有docker化prd-code。
+之前一直使用scala写spark pipeline，这次试着使用[PySpark](https://spark.apache.org/docs/latest/api/python/index.html)来模拟，主要希望熟悉一下Python的自动化测试的文件组织、mock用法、三种verification方法、code Linting，以及docker化prd-code。
 
-# 组织结构
+# 文件结构
 可以不用跟golang一样与prd-code在同一个目录下。当然也可以这样做。但是单独一个**test**目录可能会更清晰。
 
 # test
