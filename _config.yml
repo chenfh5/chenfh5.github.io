@@ -105,9 +105,10 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: disqus
-  disqus:
-    shortname: chenfh5
+  provider: valine
+  valine:
+    app_id    : 4KGYx38QtSdjf52JqAdFibCT-gzGzoHsz
+    app_key   : 08LS6iI0kFJU97vHzxWIjJ6q
 
 ## => Pageview
 ##############################
