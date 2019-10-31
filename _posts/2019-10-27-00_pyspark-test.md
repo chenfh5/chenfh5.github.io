@@ -45,7 +45,9 @@ article_header:
     - 与Spark结合，有时候切换Python环境之后就跑不起来了，此时需要根据错误来定位解决问题
 - codebase差异
     - [github](https://github.com/marketplace/category/continuous-integration)没有[gitlab](https://docs.gitlab.com/ee/ci/)的ci/cd，只能用类似Travis CI这样的来代替，但是这样一来就需要使用`Travis CI`的语法来适配`.gitlab-ci.yml`
-
+    - 刚刚看到，其实github也推出了自己的ci/cd服务，叫[GitHub Action](https://help.github.com/en/github/automating-your-workflow-with-github-actions)，其中Spark也[切换](https://github.com/apache/spark/commit/219922422003e59cc8b3bece60778536759fa669)过来了
+        - 此时，我也把这个项目的[ci](https://github.com/chenfh5/pyspark-auto-test-docker-example/blob/master/.github/workflows/ci.yml)使用GitHub Page run起来了
+        ![image](https://user-images.githubusercontent.com/8369671/67940891-7e965080-fc0f-11e9-8110-6318d2af900c.png)
 
 # Reference
 0. [PYTHON - AUTO GENERATE REQUIREMENTS.TXT](https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/)
@@ -55,4 +57,5 @@ article_header:
 0. [Dockerize your Python Application](https://runnable.com/docker/python/dockerize-your-python-application)
 0. [pyspark crash issue 1](https://stackoverflow.com/questions/50168647/multiprocessing-causes-python-to-crash-and-gives-an-error-may-have-been-in-progr)
 0. [pyspark col function not found issue](https://stackoverflow.com/a/40163314)
+0. [CI/CD using GitHub Action](https://help.github.com/en/github/automating-your-workflow-with-github-actions)
 0. [my source code](https://github.com/chenfh5/pyspark-auto-test-docker-example)
