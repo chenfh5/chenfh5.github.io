@@ -57,5 +57,5 @@ article_header:
 0. [Dockerize your Python Application](https://runnable.com/docker/python/dockerize-your-python-application)
 0. [pyspark crash issue 1](https://stackoverflow.com/questions/50168647/multiprocessing-causes-python-to-crash-and-gives-an-error-may-have-been-in-progr)
 0. [pyspark col function not found issue](https://stackoverflow.com/a/40163314)
-0. [CI/CD using GitHub Action](https://help.github.com/en/github/automating-your-workflow-with-github-actions)
+0. [CI/CD using GitHub Action - example](https://github.com/actions/starter-workflows/tree/master/ci)
 0. [my source code](https://github.com/chenfh5/pyspark-auto-test-docker-example)
