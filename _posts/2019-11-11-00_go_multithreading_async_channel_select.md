@@ -8,11 +8,21 @@ mode: immersive
 article_header:
   type: cover
   image:
-    src: https://user-images.githubusercontent.com/8369671/67628983-e82dfc00-f8a9-11e9-9183-98db96c97626.png
+    src: https://user-images.githubusercontent.com/8369671/69413221-5d76da80-0d4b-11ea-9778-a5910804a84f.png
 ---
-
 # Overview
-select关键字，多线程步骤，async步骤
+## 多线程
+一个典型的多线程模型是`生产者-消费者`，多个生产者线程往一个queue/chan里面写数据，然后另一侧多个消费者线程从queue/chan里面读数据。
+
+## 异步
+在`生产者-消费者`模型了，如何判断生产者成功写入一条数据？
+- 同步，record被完全确认(这里的确认可以是来自queue/chan侧，也可以是来自consumer侧)
+- 异步，生产者只管往queue/chan里面发，暂时不管后果
+    - 如果完全不管后果，即不管queue/chan crash/full与否，都一直发
+    - 根据统计来决定自己(生产者)是否要中断发送(send timeout stats)
+
+## code解析
+
 ```go
 package main
 
@@ -21,13 +31,6 @@ import (
 	"fmt"
 	"time"
 )
-
-func consumer(c chan int) {
-	for {
-		num := <-c
-		fmt.Printf("receive : %d\n", num)
-	}
-}
 
 func main() {
 	//go f1()
@@ -201,8 +204,24 @@ func f6() {
 		}
 	}(c)
 }
-
 ```
+
+上面的code，有几个key point,
+- `buffer channel`，如果queue/chan满了，会产生阻塞blocking，而此时如果生产者是同步的话，那么就一直hold在此。而如果生产者是异步的话，该thread/goroutine也会一直hold
+- timeout，为了避免阻塞而导致的thread/goroutine数量溢出，通常可以加上`case <-ctx.Done()`来控制该thread/goroutine的全部生命周期
+- default，加入default可以避免阻塞，在select的顺序里面，default是2nd，而1st是能够通过的case，如果多个case通过，就伪随机从这些通过的case里面选一个，而如果没有case通过，那么就走default
+    - 所以通常1st-case里面queue/chan crash/full了，导致该case失败，所以才走的default<sup>[2]</sup>
+
+## illustration
+![image](https://user-images.githubusercontent.com/8369671/69413018-fb1dda00-0d4a-11ea-9bd7-49cb51fae35e.png)
+> from unh
+
+![image](https://user-images.githubusercontent.com/8369671/69412966-e17c9280-0d4a-11ea-9dd6-1255651f642d.png)
+> from datastax
+
+![image](https://user-images.githubusercontent.com/8369671/69412945-d45fa380-0d4a-11ea-9b1e-68ebd15bd1c9.png)
+
 
 # Reference
 0. [单向channel](https://studygolang.com/articles/14567)
+0. [Priority of case versus default in golang select statements](https://stackoverflow.com/a/45580232)
