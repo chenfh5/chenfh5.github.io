@@ -221,7 +221,14 @@ func f6() {
 
 ![image](https://user-images.githubusercontent.com/8369671/69412945-d45fa380-0d4a-11ea-9b1e-68ebd15bd1c9.png)
 
-
 # Reference
 0. [单向channel](https://studygolang.com/articles/14567)
 0. [Priority of case versus default in golang select statements](https://stackoverflow.com/a/45580232)
+0. [Asynchronous programming with Go](https://medium.com/@gauravsingharoy/asynchronous-programming-with-go-546b96cd50c1)
+0. [Anatomy of Channels in Go - Concurrency in Go](https://medium.com/rungo/anatomy-of-channels-in-go-concurrency-in-go-1ec336086adb)
+    - Adding timeout
+    - WaitGroup
+    - Mutex
+0. [Go 微服务，第11部分：Hystrix和Resilience](https://cloud.tencent.com/developer/article/1157926)
+0. [Testing for asynchronous results without sleep in Go](https://stackoverflow.com/questions/30427013/testing-for-asynchronous-results-without-sleep-in-go)
+0. [hystrix-go](https://github.com/afex/hystrix-go)
