@@ -4,7 +4,6 @@ tags: golang
 key: 85
 aside:
   toc: true
-mode: immersive
 article_header:
   type: cover
   image:

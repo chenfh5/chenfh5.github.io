@@ -4,7 +4,6 @@ tags: python
 key: 83
 aside:
   toc: true
-mode: immersive
 article_header:
   type: cover
   image:
