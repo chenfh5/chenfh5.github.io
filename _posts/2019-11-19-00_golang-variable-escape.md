@@ -69,7 +69,6 @@ go run -gcflags "-m -l" main.go
 package main
 
 import (
-	"encoding/json"
 	"testing"
 )
 
@@ -117,36 +116,6 @@ type bar struct {
 	Longitude     float64
 	Greeting      string
 	FavoriteFruit string
-}
-
-var input foo
-
-func init() {
-	err := json.Unmarshal([]byte(`{
-    "_id": "5d2f4fcf76c35513af00d47e",
-    "index": 1,
-    "guid": "ed687a14-590b-4d81-b0cb-ddaa857874ee",
-    "isActive": true,
-    "balance": "$3,837.19",
-    "picture": "http://placehold.it/32x32",
-    "age": 28,
-    "eyeColor": "green",
-    "name": "Rochelle Espinoza",
-    "gender": "female",
-    "company": "PARLEYNET",
-    "email": "rochelleespinoza@parleynet.com",
-    "phone": "+1 (969) 445-3766",
-    "address": "956 Little Street, Jugtown, District Of Columbia, 6396",
-    "about": "Excepteur exercitation labore ut cupidatat laboris mollit ad qui minim aliquip nostrud anim adipisicing est. Nisi sunt duis occaecat aliquip est irure Lorem irure nulla tempor sit sunt. Eiusmod laboris ex est velit minim ut cillum sunt laborum labore ad sunt.\r\n",
-    "registered": "2016-03-20T12:07:25 -00:00",
-    "latitude": 61.471517,
-    "longitude": 54.01596,
-    "greeting": "Hello, Rochelle Espinoza!You have 9 unread messages.",
-    "favoriteFruit": "banana"
-  }`), &input)
-	if err != nil {
-		panic(err)
-	}
 }
 
 func byPointer(in *foo) *bar {
@@ -199,7 +168,21 @@ func byValue(in foo) bar {
 	}
 }
 
-var pointerResult *bar
+func byPointer2(in *foo) *foo {
+	in.Address = "sg"
+	return in
+}
+
+func byValue2(in foo) foo {
+	in.Address = "sg"
+	return in
+}
+
+var input foo
+var output1 *bar
+var output2 bar
+var output3 *foo
+var output4 foo
 
 func BenchmarkByPointer(b *testing.B) {
 	var r *bar
@@ -207,10 +190,8 @@ func BenchmarkByPointer(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		r = byPointer(&input)
 	}
-	pointerResult = r
+	output1 = r
 }
-
-var valueResult bar
 
 func BenchmarkByValue(b *testing.B) {
 	var r bar
@@ -218,17 +199,55 @@ func BenchmarkByValue(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		r = byValue(input)
 	}
-	valueResult = r
+	output2 = r
 }
 
-//➜  gotest git:(master) go test -bench=.
-//goos: darwin
-//goarch: amd64
-//pkg: gotest
-//BenchmarkByPointer-12           20000000                81.1 ns/op
-//BenchmarkByValue-12             50000000                40.0 ns/op
-//PASS
-//ok      gotest  4.558s
+func BenchmarkByPointer2(b *testing.B) {
+	var r *foo
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		r = byPointer2(&input)
+	}
+	output3 = r
+}
+
+func BenchmarkByValue2(b *testing.B) {
+	var r foo
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		r = byValue2(input)
+	}
+	output4 = r
+}
+
+/*
+➜  gotest git:(master) go test -bench=. -gcflags "-m -l -N"
+# gotest [gotest.test]
+./main_test.go:74:3: &bar literal escapes to heap                 <--------
+./main_test.go:53:16: leaking param: in to result ~r1 level=0
+./main_test.go:78:14: leaking param: in to result ~r1 level=0
+./main_test.go:103:17: leaking param: in to result ~r1 level=0
+./main_test.go:108:15: leaking param: in to result ~r1 level=0
+./main_test.go:119:25: BenchmarkByPointer b does not escape
+./main_test.go:123:17: BenchmarkByPointer &input does not escape
+./main_test.go:128:23: BenchmarkByValue b does not escape
+./main_test.go:141:18: &input escapes to heap                     <--------
+./main_test.go:137:26: BenchmarkByPointer2 b does not escape
+./main_test.go:146:24: BenchmarkByValue2 b does not escape
+# gotest.test
+/var/folders/v4/_kwdbjk979bbk2fg_x5g9glm0000gn/T/go-build138216855/b001/_testmain.go:46:42: testdeps.TestDeps literal escapes to heap
+goos: darwin
+goarch: amd64
+pkg: gotest
+BenchmarkByPointer-12           20000000                91.4 ns/op
+BenchmarkByValue-12             30000000                47.0 ns/op
+BenchmarkByPointer2-12          500000000                3.08 ns/op
+BenchmarkByValue2-12            50000000                26.4 ns/op
+PASS
+ok      gotest  6.606s
+➜  gotest git:(master)
+*/
+
 
 // 这里在byPointer函数里面构造的*bar变量发生了逃逸
 ```

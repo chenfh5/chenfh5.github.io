@@ -58,15 +58,15 @@ article_header:
 # 训练周期
 总体的训练周期是，
 
-|礼拜|项目|
-|----|----|
-|周一|跑步|
-|周二|跑步|
-|周三|游泳|
-|周四|休息|
-|周五|跑步|
-|周六|长距离|
-|周日|SR两项|
+|dow|item|type|distance
+|----|----|----|----|
+|周一|lap游泳|easy|3k
+|周二|western loop ride|medium|60k
+|周三|interval/tempo|hard|5k热身(600) + [1快(425)+1慢]*5/ [5k(440)]  + 1k/ 2k冷身
+|周四|跑步|medium|16k(525)
+|周五|休息|easy|None
+|周六|sentosa三项|medium|2k(OW) + 40k + 10k(600)
+|周日|长距离|hard|5k热身(600) + 23~31k(535)
 
 # 比赛当天
 ## 游泳项
