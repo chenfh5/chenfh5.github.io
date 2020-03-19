@@ -59,3 +59,4 @@ Continuous deployment is a strategy for software releases wherein any code commi
 # Reference
 0. [Helm介绍 - 强大的Kubernetes包管理工具](https://zhaohuabing.com/2018/04/16/using-helm-to-deploy-to-kubernetes/)
 0. [使用Spinnaker自动化部署代码到Kubernetes示例](https://blog.csdn.net/aixiaoyang168/article/details/79591566)
+0. [Get Started with Spinnaker on Kubernetes](https://thenewstack.io/getting-started-spinnaker-kubernetes/)
