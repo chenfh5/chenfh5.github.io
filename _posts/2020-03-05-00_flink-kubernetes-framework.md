@@ -35,7 +35,7 @@ Continuous deployment is a strategy for software releases wherein any code commi
 负责kubernetes应用的包管理<sup>1</sup>, 类似apt、yum、homebrew[工具](https://github.com/helm/charts/tree/master/stable/elasticsearch)
 
 ![image](https://user-images.githubusercontent.com/8369671/76966873-945ba680-6961-11ea-9060-8c49a3a30ae9.png)
-> from 1
+> from ref.1
 
 ## spinnaker
 > 集群管理和部署
@@ -49,7 +49,7 @@ Continuous deployment is a strategy for software releases wherein any code commi
 > from google cloud
 
 ![image](https://user-images.githubusercontent.com/8369671/76968071-45167580-6963-11ea-9a5d-eac1b71bd57f.png)
-> from 2
+> from ref.2
 
 # install
 0. minikube cluster/kubectl
