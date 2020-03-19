@@ -7,7 +7,7 @@ aside:
 article_header:
   type: cover
   image:
-    src: https://user-images.githubusercontent.com/8369671/77038213-2610f580-69ee-11ea-87bf-e247cfc6bf3a.png
+    src: https://user-images.githubusercontent.com/8369671/77039263-83a64180-69f0-11ea-871e-0a5864a7f851.png
 
 ---
 
