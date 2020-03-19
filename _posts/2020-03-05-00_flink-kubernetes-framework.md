@@ -15,7 +15,8 @@ article_header:
 Continuous deployment is a strategy for software releases wherein any code commit that passes the automated testing phase is automatically released into the production environment, making changes that are visible to the software's users.
 > from techtarget
 
-\
+<br>
+
 ![image](https://user-images.githubusercontent.com/8369671/77037392-34f6a880-69ec-11ea-99e5-0dde00856978.png)
 > A diagram about how to deploy a flink application while codes change
 > - easy to track, everything is git, no cron-job
