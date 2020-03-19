@@ -1,6 +1,6 @@
 ---
 title: Flink Kubernetes CD Framework
-tags: weekly
+tags: kubernetes
 key: 99
 aside:
   toc: true
