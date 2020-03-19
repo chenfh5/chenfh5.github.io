@@ -7,7 +7,7 @@ aside:
 article_header:
   type: cover
   image:
-    src: https://user-images.githubusercontent.com/8369671/77039263-83a64180-69f0-11ea-871e-0a5864a7f851.png
+    src: https://user-images.githubusercontent.com/8369671/77038213-2610f580-69ee-11ea-87bf-e247cfc6bf3a.png
 
 ---
 
@@ -17,7 +17,7 @@ Continuous deployment is a strategy for software releases wherein any code commi
 
 <br>
 
-![image](https://user-images.githubusercontent.com/8369671/77037392-34f6a880-69ec-11ea-99e5-0dde00856978.png)
+![image](https://user-images.githubusercontent.com/8369671/77039263-83a64180-69f0-11ea-871e-0a5864a7f851.png)
 > A diagram about how to deploy a flink application while codes change
 > - easy to track, everything is git, no cron-job
 > - easy to scala-up
