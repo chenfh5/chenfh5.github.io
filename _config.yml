@@ -105,10 +105,14 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: valine
-  valine:
-    app_id    : 4KGYx38QtSdjf52JqAdFibCT-gzGzoHsz
-    app_key   : 08LS6iI0kFJU97vHzxWIjJ6q
+  provider: gitalk
+  gitalk:
+    clientID    : 8b54f5e906629053a3ba
+    clientSecret: 03453ee3cf92615a4370617ba96cd7590b6b1fef
+    repository  : chenfh5/chenfh5.github.io
+    owner       : chenfh5
+    admin: # Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+      - chenfh5
 
 ## => Pageview
 ##############################
