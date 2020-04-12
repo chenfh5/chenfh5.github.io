@@ -4,10 +4,6 @@ tags: weekly
 key: 88
 aside:
   toc: true
-article_header:
-  type: cover
-  image:
-    src: xx
 
 ---
 
