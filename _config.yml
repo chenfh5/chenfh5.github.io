@@ -105,14 +105,9 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk
-  gitalk:
-    clientID    : 8b54f5e906629053a3ba
-    clientSecret: 03453ee3cf92615a4370617ba96cd7590b6b1fef
-    repository  : chenfh5.github.io.comment
-    owner       : chenfh5
-    admin: # Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
-      - chenfh5
+  provider: disqus
+  disqus:
+    shortname: chenfh5
 
 ## => Pageview
 ##############################
