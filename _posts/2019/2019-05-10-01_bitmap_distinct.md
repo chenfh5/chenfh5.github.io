@@ -1,7 +1,7 @@
 ---
 title: Bitmap压缩算法
 tags: architect
-key: 68
+key: 69
 modify_date:
 ---
 

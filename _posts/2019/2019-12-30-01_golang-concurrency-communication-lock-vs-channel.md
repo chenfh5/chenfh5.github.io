@@ -8,8 +8,8 @@ article_header:
   type: cover
   image:
     src: https://user-images.githubusercontent.com/8369671/71766792-e8e4ad80-2f3e-11ea-8bb9-4dfd0705355f.png
-
 ---
+
 # Overview
 go里面开启一个线程是很简单的，直接引入`go`关键字就会开启一条新的goroutine
 
