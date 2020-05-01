@@ -1,7 +1,7 @@
 ---
 title: golang concurrency
 tags: golang
-key: 93
+key: 94
 aside:
   toc: true
 article_header:

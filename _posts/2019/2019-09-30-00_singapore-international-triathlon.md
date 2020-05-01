@@ -1,7 +1,7 @@
 ---
 title: 20190929新加坡国际铁人三项
 tags: marathon
-key: 80
+key: 81
 aside:
   toc: true
 article_header:
