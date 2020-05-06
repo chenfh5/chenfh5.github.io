@@ -1,5 +1,5 @@
 ---
-title: Big Data One Stack
+title: One Stack Big Data Platform 
 tags: architect
 key: 103
 article_header:
