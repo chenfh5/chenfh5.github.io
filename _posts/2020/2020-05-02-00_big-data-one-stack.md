@@ -57,7 +57,7 @@ article_header:
 0. [Dynamo: Amazon’s Highly Available Key-value Store](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)
 0. [Pulsar(新一代高性能消息系统)核心总结](http://lxkaka.wang/2019/03/25/pulsar/)
 0. [BookKeeper 原理浅谈](http://matt33.com/2019/01/28/bk-store-realize/)
-0. [Comparing Pulsar and Kafka: How a Segment-Based Architecture Delivers Better Performance, Scalability, and Resilience](https://www.splunk.com/en_us/blog/it/comparing-pulsar-and-kafka-how-a-segment-based-architecture-delivers-better-performance-scalability-and-resilience.html)
+0. [Comparing Pulsar and Kafka](https://www.splunk.com/en_us/blog/it/comparing-pulsar-and-kafka-how-a-segment-based-architecture-delivers-better-performance-scalability-and-resilience.html)
 0. [Understanding How Apache Pulsar Works](https://jack-vanlightly.com/blog/2018/10/2/understanding-how-apache-pulsar-works)
 
 ## data compute
