@@ -121,10 +121,10 @@ article_header:
 
 ### query engine
 ![image](https://user-images.githubusercontent.com/8369671/81101961-78c45380-8f41-11ea-83c9-1c6e73bde07f.png)
-> presto(2013): master-slave, mem-base MPP, SQL, connector
+> presto(2013): master-slave, mem-base MPP, SQL, connector, via slideshare
 
 ![image](https://user-images.githubusercontent.com/8369671/80785361-96e12b00-8bb2-11ea-9f20-a1e9cc526dae.png)
-> sparksql(2014): catalyst, cost base, rdd
+> sparksql(2014): catalyst, cost base, rdd, via dataflair
 
 ![image](https://user-images.githubusercontent.com/8369671/81178389-b0cba500-8fda-11ea-9bbc-c1b8542701f6.png)
 > hive(2010): SQL, MR, metadata, via andr83 
