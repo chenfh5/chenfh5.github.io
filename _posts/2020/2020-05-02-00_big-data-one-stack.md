@@ -26,7 +26,7 @@ article_header:
 
 # Structure
 下面是一个不大完善的数据栈图, 中台可以在此之上做扩展. 
-![db Arch](https://user-images.githubusercontent.com/8369671/81181301-d78bda80-8fde-11ea-8324-82afb05fcdfa.png)
+![db Arch](https://user-images.githubusercontent.com/8369671/81493843-8a598280-92d6-11ea-99bf-2ca6abeca20a.png)
 
 ## data collection
 ![image](https://user-images.githubusercontent.com/8369671/80909688-bf0c8d80-8d5c-11ea-94d4-8201c9142540.png)
@@ -130,7 +130,11 @@ article_header:
 > hive(2010): SQL, MR, metadata, via andr83 
 
 ![image](https://user-images.githubusercontent.com/8369671/81178977-97772880-8fdb-11ea-9707-97b4f25c3f1b.png)
-> pig(2008): pig latin, MR, via dezyre  
+> pig(2008): pig latin, MR, via dezyre
+
+### graph
+![image](https://user-images.githubusercontent.com/8369671/81493837-6f870e00-92d6-11ea-8407-65ad14a2426f.png)
+> neo4j(2007): 定长记录结构, cypher, HA, via slideshare
 
 #### Reference
 0. [IO多路复用技术(multiplexing)是什么？](https://www.zhihu.com/question/28594409)
@@ -148,6 +152,7 @@ article_header:
 0. [Presto架构及原理、安装及部署](https://my.oschina.net/hblt147/blog/3006435#h3_13)
 0. [Spark SQL Catalyst优化器](https://chenfh5.github.io/2018/03/11/spark-sql-catalyst.html)
 0. [What is Hive Metastore?](https://www.quora.com/What-is-Hive-Metastore)
+0. [Neo4j_高层架构和应用](https://blog.csdn.net/Regan_Hoo/article/details/78772479)
 
 ## data analytics
 ### BI
