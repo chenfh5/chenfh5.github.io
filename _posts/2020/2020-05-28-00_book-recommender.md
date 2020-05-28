@@ -74,6 +74,11 @@ article_header:
 - 开发前端展示与交互, html, css, js
 - load balance
 
+# 后记
+- 网络世界很丰饶, 当然这也埋没了一定量的好作品, 自己一个人的力量是非常有限的, 即便Google的rank已经将最高相似度返回了, 但这个相识度更类似与tf/idf和出入度, 主要集中在keyword的命中和网页的权重
+- 通过crawler, 个人可以将彼此的大量网络数据爬取出来, 加之利用即可定制化自己的查找策略和侧重, 比如书单, 影单, 歌单, stockList(过了:bowtie:, 投资有风险) 
+
+
 # Reference
 0. [jsoup: Java HTML Parser](https://jsoup.org/)
 0. [Scraping Websites using Scala and Jsoup](https://www.lihaoyi.com/post/ScrapingWebsitesusingScalaandJsoup.html)
