@@ -4,7 +4,8 @@ tags: architect recommender-systems
 key: 104
 article_header:
   type: cover
-  image: https://user-images.githubusercontent.com/8369671/83143016-e2d8ae80-a123-11ea-878d-87b0489b53f6.png
+  image: 
+    src: https://user-images.githubusercontent.com/8369671/83143016-e2d8ae80-a123-11ea-878d-87b0489b53f6.png
 ---
 
 # Overview
@@ -52,7 +53,7 @@ article_header:
 - 权重合并算法
 
 ## Ranker
-当分配与合并好每本书与原书的相似度之后, 直接返回topK.
+当分配与合并好每本书与原书的相似度weight之后, 直接返回topK.
 
 ## Http Server
 基于[Grizzly](https://javaee.github.io/grizzly/httpserverframework.html)搭建了http server.
