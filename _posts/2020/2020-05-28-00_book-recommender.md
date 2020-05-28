@@ -23,7 +23,7 @@ article_header:
 
 当有了这些素材之后, 就可以着手实现算法.
 
-# Architucture
+# Architect
 先来看看总体结构,
 ![img](https://user-images.githubusercontent.com/8369671/83042682-82d6ff00-a074-11ea-8713-761b41f23db0.png)
 > a simple book recommender system
