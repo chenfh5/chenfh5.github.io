@@ -78,6 +78,7 @@ zk的工作集群可以简单分成两类，一个是Leader，其余的都是Lea
 > 角色role
 
 ## zk消息类型
+
 znode | meaning
 --- | ---
 PING | 指Learner的心跳信息
@@ -145,6 +146,7 @@ Zab原子广播保证多个指令执行的[顺序](https://my.oschina.net/guhanj
 > leader选举投票过程
 
 ### Server的三种状态
+
 status | meaning
 --- | ---
 LOOKING | 当前server不知道leader是谁，正在搜寻
