@@ -26,7 +26,7 @@ article_header:
 
 # Architect
 先来看看总体结构,
-![img](https://user-images.githubusercontent.com/8369671/83042682-82d6ff00-a074-11ea-8713-761b41f23db0.png)
+![img](https://user-images.githubusercontent.com/8369671/83434117-71bf3100-a46c-11ea-8c84-4d2f0764dc4e.png)
 > a simple book recommender system
 
 根据用户给定的books, 找到这些books所属的booklists, 然后通过算法控制这些booklists里面所有books的weight, 之后取TopK返回.
