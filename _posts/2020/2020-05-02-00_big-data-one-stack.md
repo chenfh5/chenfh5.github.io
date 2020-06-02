@@ -2,7 +2,6 @@
 title: One Stack Big Data Platform 
 tags: architect
 key: 103
-mode: immersive
 article_header:
   type: cover
   image:

@@ -2,7 +2,6 @@
 title: A simple book recommender
 tags: architect recommender-systems
 key: 104
-mode: immersive
 article_header:
   type: cover
   image: 
