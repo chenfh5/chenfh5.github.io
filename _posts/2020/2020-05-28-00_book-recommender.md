@@ -62,7 +62,7 @@ article_header:
 > http call (70s, too slow)
 
 ### Promo
-- [LRUCache](https://stackoverflow.com/a/59116615)## Other
+- [LRUCache](https://stackoverflow.com/a/59116615)
     ![image](https://user-images.githubusercontent.com/8369671/83148518-a610b580-a12b-11ea-9a85-340a96963041.png)
     > cache
 
