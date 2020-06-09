@@ -1,5 +1,5 @@
 ---
-title: Golang传值与传地址的内存逃逸
+title: golang传值与传地址的内存逃逸
 tags: golang
 key: 86
 aside:

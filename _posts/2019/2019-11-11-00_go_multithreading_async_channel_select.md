@@ -1,5 +1,5 @@
 ---
-title: Golang多线程与异步关注点
+title: golang多线程与异步关注点
 tags: golang
 key: 85
 aside:
