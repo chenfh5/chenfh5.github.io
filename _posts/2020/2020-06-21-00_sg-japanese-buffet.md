@@ -9,7 +9,7 @@ article_header:
 ---
 
 # Overview
-感觉japan是一个比较clean, polite的地方, 当然其中的food也是很精致, 其中比较喜欢的是Sashimi. 
+感觉japan是一个比较clean, polite的地方, 当然其中的food也是很精致, 其中比较喜欢的是[sashimi](https://en.wikipedia.org/wiki/Sashimi). 
 
 虽然平时也会到japan restaurant单点ala carte, 但是还是没有到buffet吃的开, 特别是运动过后的下一餐. 
 
