@@ -17,7 +17,7 @@ article_header:
 
 # singapore buffet
 
-restaurant | fee | remark
+restaurant | fee(S$) | remark
 ---- | ---- | ----
 [kiseki](https://www.facebook.com/kisekirestaurant/) | 22.8 ~ 39.8 | 5楼?
 [shin minori](https://www.facebook.com/shinminori/) | 53.9 | -
