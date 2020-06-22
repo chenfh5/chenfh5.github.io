@@ -17,13 +17,13 @@ article_header:
 
 # singapore buffet
 
-restaurant | fee | fb | remark
----- | ---- | ---- | ---- 
-kiseki | 22.8 ~ 39.8 | https://www.facebook.com/kisekirestaurant/ | 5楼?
-shin minori | 53.9 | https://www.facebook.com/shinminori/ | -
-kushi | 38.8 ~ 69.8 | https://www.facebook.com/kushidining/ | -
-mitsuba | 41.9 | https://www.facebook.com/eatmitsuba/ | -
-ikoi | 38.0 | https://www.facebook.com/ikoijapaneserestaurant | -
+restaurant | fee | remark
+---- | ---- | ----
+[kiseki](https://www.facebook.com/kisekirestaurant/) | 22.8 ~ 39.8 | 5楼?
+[shin minori](https://www.facebook.com/shinminori/) | 53.9 | -
+[kushi](https://www.facebook.com/kushidining/) | 38.8 ~ 69.8 | -
+[mitsuba](https://www.facebook.com/eatmitsuba/) | 41.9 | -
+[ikoi](https://www.facebook.com/ikoijapaneserestaurant/) | 38.0 | -
 
 
 # Referene
