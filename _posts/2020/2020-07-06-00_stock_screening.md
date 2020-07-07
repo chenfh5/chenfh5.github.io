@@ -17,7 +17,7 @@ article_header:
 ## overview
 
 ![image](https://user-images.githubusercontent.com/8369671/86585827-9e112480-bfb9-11ea-8569-05ed33d34ecd.png)
-> https://www.gurufocus.com/stock/fb/summary
+> https://www.gurufocus.com/stock/fb
 
 ## returns ration
 
