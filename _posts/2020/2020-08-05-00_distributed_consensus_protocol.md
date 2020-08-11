@@ -18,10 +18,10 @@ article_header:
 这时候, 在已知有成员谋反的情况下, 其余忠诚的将军在不受叛徒的影响下如何达成一致的协议, 拜占庭问题就此形成.
 
 在计算机领域, 非黑客的情况下, 一般都会假设计算机之间不会互相发送恶意信息, 而更多的是宕机/网络延迟所造成的传信停止/滞后
-> 所以将拜占庭将军问题根据常见的工作问题进行化简: 假设将军中没有叛军, 信使的信息可靠但有可能被暗杀的情况下, 将军们如何达成一致性决定?
+> 所以将拜占庭将军问题可以简化为: 假设将军中没有叛军, 信使的信息可靠但有可能被暗杀的情况下, 将军们如何达成一致性决定?
 
 # paxos
-## 类型
+## type
 - basic/single-decree paxos, 一次决策一个value, 仅在一个值上达成一致
 - multi paxos, 连续决策多个value, 做到在一系列值上达成一致
     - 因为每个命令都通过一个Basic Paxos算法实例来达到一致, 会产生大量开销 
@@ -51,7 +51,7 @@ Client   Proposer      Acceptor     Learner
    |         |          |  |  |       |  |
 ```
 
-## 角色
+## role
 - client, 发出改值需求, 即需求方, 类似群众
 - proposer, 随机选择一个节点, 将改值需求作为提案, 即提案者, 类似`基层`人大代表, 帮群众发声
 - acceptor, 为提案投票, 即投票者, 类似全国人大代表, 负责审议表决
@@ -105,7 +105,7 @@ Phase 2,
 - 发送的请求是连续的, 即continuously append only
 - 限制性选主. 必须有最新, 最全的日志节点才可以当选
 
-## 角色
+## role
 - follower, 响应candidate/leader的需求, 接受并持久化Leader同步过来的的日志 
     - election timeout
         > The election timeout is the amount of time a follower waits until becoming a candidate.<br>
@@ -162,6 +162,8 @@ the entry to its local state machine.
 # VR
 Viewstamped Replication(VR),
 
+类似raft,
+
 VR | raft 
 ---- | ---- 
 replicas| peers 
@@ -201,6 +203,7 @@ selected by the primary.
     分布式锁与领导选举/lock -> leadership
     排他锁eXclusive lock -> only one leader
     可重入锁reentrant lock -> 能再次被选举为leader并自己投自己
+    ```
 
 ## keypoint
 - follower/observer越多, 读性能越好, 但是如果保证f/o是最新的?
@@ -284,12 +287,44 @@ zen discovery主要用于<sup>21</sup>,
 - forming a cluster
 - publishing cluster state
 
+quorum仅用于选主, 但是选主后的publishing就需要所有data nodes都返回ack而非仅quorum个就行, 这可能是es的特性所决定. 也因此不用raft而[创造](https://www.elastic.co/blog/a-new-era-for-cluster-coordination-in-elasticsearch)了zen.
+
 ## flow
 ![image](https://user-images.githubusercontent.com/8369671/89873333-db865480-dbec-11ea-960c-2bcf18e90b44.png)
 > discovering
 
 # gossip
+Cassandra/Scylla using [gossip](https://docs.scylladb.com/kb/gossip/) to maintain a masterless cluster, using the [consistent hash ring](https://docs.scylladb.com/architecture/ringarchitecture/) to determine the key's routing instead of decided by the master, 
+- pros
+    - scalable
+    - masterless, fault-tolerant, without SPOF
+    - masterless, without single master resource restriction(e.g., es master metadata max size)
+- cons
+    - message duplicate(e.g., A->B, then C->B, B receive twice)
+    - message delay, need propagate, but in master mode, master can send directly
 
+## model<sup>23</sup>
+- SI model/simple epidemics/anti-entropy, 以固定的概率传播所有的数据
+    - push style, nodeA `periodically` send(push) all its `current content` to randomly selected nodeB, then nodeB update itself, A->B
+    - pull style, nodeA periodically ask(pull) `new updates` from randomly selected nodeB, then nodeA update itself, A->B(new updates)->A
+    - push-pull stype, combination of push and pull, A->B->A->B, i.e., A send its `diff new updates` to B at last
+
+- SIR model/complex epidemics/rumor-mongering, 引入removed标记仅传播新到达的数据
+    - based on push style
+
+## flow
+![image](https://user-images.githubusercontent.com/8369671/89935035-15cf1080-dc44-11ea-9a6d-3027184e92d2.png)
+> illustration of three types of group communication topologies: (a) Centralized approach; (b) Fully connected overlay; and (c) Gossip-based approach(random pick), credit: jisajournal
+
+## paper
+```go
+gossip/convergence spreads is O(logN)
+
+eventual consistency
+
+A node in the network randomly selects a peer with which it will 
+exchange some information.
+```
 
 # Reference
 0. [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
@@ -314,3 +349,5 @@ zen discovery主要用于<sup>21</sup>,
 0. [zab github code](https://github.com/zk1931/jzab)
 0. [es discovery and cluster formation](https://www.elastic.co/guide/en/elasticsearch/reference/7.8/modules-discovery.html)
 0. [zen github code](https://github.com/elastic/elasticsearch/tree/v7.8.1/server/src/main/java/org/elasticsearch/discovery)
+0. [Gossip and Epidemic Protocols](http://disi.unitn.it/~montreso/ds/papers/montresor17.pdf)
+0. [gossip github code](https://github.com/vikaasa/gossip-pushsum-scala)
