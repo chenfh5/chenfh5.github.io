@@ -2,8 +2,8 @@ header:
   - title: Home
     url: /
 
-  - title: Archive
-    url: /archive.html
+#  - title: Archive
+#    url: /archive.html
 
   - title: About
     url: /about.html
