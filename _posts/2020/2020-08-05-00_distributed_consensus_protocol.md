@@ -176,7 +176,7 @@ view change | re-election
 
 ## flow
 ![image](https://user-images.githubusercontent.com/8369671/89878993-dfb67000-dbf4-11ea-90bc-2997e9820eb2.png)
-> here f=1, so quorum=1+1=2, so primary at least wait for 1 replica to response prepareOk
+> here f=1, so quorum=1+1=2, so primary at least wait for 1 replica to response prepareOk<sup>14</sup>
 
 ```go
 VR ensures reliability and availability when no more
