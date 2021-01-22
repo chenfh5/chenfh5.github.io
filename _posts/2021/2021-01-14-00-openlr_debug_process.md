@@ -75,7 +75,7 @@ val outgoing = osmSegmentMap.filter { case (_, s) => s.startNode == nid }.keys.t
 
 上面代码是在map里面filter, O(n)
 
-# solution
+## solution
 定位到bug之后, 就在此优化, 一般都是空间换时间. 在此也是, 在外面生成两个map来存放nodeID所对应的所有segmentID,
 ```scala
 // init
