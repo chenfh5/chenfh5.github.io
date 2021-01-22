@@ -75,7 +75,9 @@ val outgoing = osmSegmentMap.filter { case (_, s) => s.startNode == nid }.keys.t
 
 上面代码是在map里面filter, O(n)
 
-## solution
+## solution 
+iterator/filter map -> lookup map, O(n) -> O(1)
+
 定位到bug之后, 就在此优化, 一般都是空间换时间. 在此也是, 在外面生成两个map来存放nodeID所对应的所有segmentID,
 ```scala
 // init
@@ -121,7 +123,9 @@ val endnodeSegMap = mutable.Map[Long, mutable.ListBuffer[Long]]() // endnote_id 
 ![image](https://user-images.githubusercontent.com/8369671/105031536-64ed5d00-5a90-11eb-9d5d-c86b262fa26f.png)
 > V2
 
-## disk storage
+## solution
+in-memory -> disk storage/off heap
+
 虽然V2使用list替换掉set减轻了负担, 但是in-memory压力还是很大, 所以这里试着引入disk storage/off-heap memory的db, 比如[mapdb](https://github.com/jankotek/mapdb)或者[chronicleMap](https://github.com/OpenHFT/Chronicle-Map), 试了mapdb, 在fileDB SIN的情况下, 跑不成功.
 
 ```scala
