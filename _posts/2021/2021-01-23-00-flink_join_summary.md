@@ -116,7 +116,6 @@ while r and s:
 
 > ps. 大数据处理framework有一个好处就是shuffle后天然是sort的, 有利于merge-sort join, 这也是为什么它们在大数据方面很优异. 当然核心思想还是分治, 分治后一个partition的join就相当于跑在普通机器的SQLite
 
-
 # Classification
 ## flink
 ### [table join](https://github.com/apache/flink/blob/release-1.12.1/flink-table/flink-table-api-java/src/main/java/org/apache/flink/table/api/internal/TableImpl.java#L225)
