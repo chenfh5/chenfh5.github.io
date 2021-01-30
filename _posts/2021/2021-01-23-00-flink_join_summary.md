@@ -114,6 +114,8 @@ while r and s:
 ![image](https://user-images.githubusercontent.com/8369671/106003201-eecea300-60ec-11eb-8db3-272ea2ac079b.png)
 > sort, iterator not from very beginning merge, credit: cnblogs
 
+> ps. 大数据处理framework有一个好处就是shuffle后天然是sort的, 有利于merge-sort join, 这也是为什么它们在大数据方面很优异. 当然核心思想还是分治, 分治后一个partition的join就相当于跑在普通机器的SQLite
+
 
 # Classification
 ## flink
@@ -151,9 +153,6 @@ while r and s:
     0. buffer past input as streaming state
     0. limit the state using watermarks
 - bounded/window/interval
-
-----
-> ps. 大数据处理framework有一个好处就是shuffle后天然是sort的, 有利于merge-sort join, 这也是为什么它们在大数据方面很优异. 当然核心思想还是分治, 分治后一个partition的join就相当于跑在普通机器的sql-lite.
 
 # Realtime Query on Stream
 如何在一个stream中实时作query,
