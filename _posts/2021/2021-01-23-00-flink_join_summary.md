@@ -1,5 +1,5 @@
 ---
-title: join implement and classification in big data processing flamework
+title: join implement and classification in big data processing framework
 tags: architect flink spark
 key: 119
 article_header:
