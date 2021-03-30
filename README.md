@@ -5,7 +5,8 @@
 0. fork [blog project](https://github.com/chenfh5/chenfh5.github.io)
 0. rename
 0. install [jekyll](https://jekyllrb.com/docs/)
-0. bundle install
+0. cd to project's root
+0. run `bundle install`
 0. modify
    - change configuration to fit your style
    - add new article into `_post` directory
