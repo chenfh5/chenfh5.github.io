@@ -55,3 +55,4 @@ article_header:
 0. [Amazon EKS 用户指南](https://docs.aws.amazon.com/zh_cn/eks/latest/userguide/getting-started.html)
 0. [terraform-aws-eks](https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest)
 0. 卡梅拉white paper
+0. [Spark 迁移到 K8S 在有赞的实践与经验](https://mp.weixin.qq.com/s/PTH0LloSt0-z_glB4f1loQ)

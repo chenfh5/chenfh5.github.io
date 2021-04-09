@@ -1,0 +1,26 @@
+---
+title: serverless openwhisk关注点
+tags: architecture serverless
+key: 122
+article_header:
+  type: cover
+  image:
+    src: 
+---
+
+# Overview
+新一代的application event drive架构方式<sup>1</sup>, 实例扩展透明. 
+
+之前的方式更多的是整包部署到instances, 然后通过proxy将其restful接口暴露以供调用.
+
+而sl把服务分割成不同功能的functions. 每个function deploy到sl上去, 然后根据不同的event来sequence trigger, 免去了好多infra运维和桥接工作. 让client可以focus在application层面.
+- 公有云: 实现其提供的function<sup>2</sup>
+- 私有云: 可以base on一些open source的serverless framework来构建自己的sl服务<sup>4,5</sup>
+
+# Reference
+0. [Serverless（无服务）基础知识](https://juejin.cn/post/6844903904224903181)
+0. [AWS Lambda](https://aws.amazon.com/cn/lambda/?nc1=h_ls)
+0. [aws上构建serverless Web应用程序](https://aws.amazon.com/cn/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/)
+0. [apache openwhisk](https://openwhisk.apache.org/)
+0. [kubeless](https://kubeless.io/)
+0. [世纪联华的 Serverless 之路](https://mp.weixin.qq.com/s/u9odcw-60Cc6nKyEbbsPFQ)
