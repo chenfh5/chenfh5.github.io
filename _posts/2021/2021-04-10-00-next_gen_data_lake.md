@@ -12,4 +12,5 @@ article_header:
 TODO
 
 # Reference
-0. [Serverless（无服务）基础知识](https://juejin.cn/post/6844903904224903181)
+0. [一文了解实时数据仓库的发展、架构和趋势](https://mp.weixin.qq.com/s/cK6VA7Mnn6F6zdpdiBODPg)
+0. [爱奇艺大数据生态的实时化建设](https://mp.weixin.qq.com/s/_7Ht_A2coy2NYiXc5xcC2Q)
