@@ -81,3 +81,4 @@ article_header:
 0. [数据工程师眼中的 Delta lake](https://mp.weixin.qq.com/s/Plh1BRp9uZrfIJN5Mi57NA)
 0. [基于Flink+Iceberg构建企业级实时数据湖](https://www.bilibili.com/video/BV14A411J7e6?p=4)
 0. [aws什么是数据湖?](https://aws.amazon.com/cn/big-data/datalakes-and-analytics/what-is-a-data-lake/)
+0. [数据湖(Data Lake)总结](https://zhuanlan.zhihu.com/p/91165577)
