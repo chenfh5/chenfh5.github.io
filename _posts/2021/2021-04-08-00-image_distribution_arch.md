@@ -51,8 +51,8 @@ article_header:
 对用户展示, 通常是spinnaker的ui或者自包装ui.
 
 # Reference
-0. [使用 Terraform 在 AWS 中国区域实现自动化部署指南系列（一） TERRAFORM 入门](https://aws.amazon.com/cn/blogs/china/aws-china-region-guide-series-terraform1/#:~:text=Terraform%E6%98%AF%E4%B8%80%E4%B8%AAIT%E5%9F%BA%E7%A1%80,%E6%8E%A7%E5%88%B6%E7%9A%84AWS%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E3%80%82)
-0. [Amazon EKS 用户指南](https://docs.aws.amazon.com/zh_cn/eks/latest/userguide/getting-started.html)
-0. [terraform-aws-eks](https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest)
-0. 卡梅拉white paper
-0. [Spark 迁移到 K8S 在有赞的实践与经验](https://mp.weixin.qq.com/s/PTH0LloSt0-z_glB4f1loQ)
+1. [使用 Terraform 在 AWS 中国区域实现自动化部署指南系列（一） TERRAFORM 入门](https://aws.amazon.com/cn/blogs/china/aws-china-region-guide-series-terraform1/#:~:text=Terraform%E6%98%AF%E4%B8%80%E4%B8%AAIT%E5%9F%BA%E7%A1%80,%E6%8E%A7%E5%88%B6%E7%9A%84AWS%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E3%80%82)
+1. [Amazon EKS 用户指南](https://docs.aws.amazon.com/zh_cn/eks/latest/userguide/getting-started.html)
+1. [terraform-aws-eks](https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest)
+1. 卡梅拉white paper
+1. [Spark 迁移到 K8S 在有赞的实践与经验](https://mp.weixin.qq.com/s/PTH0LloSt0-z_glB4f1loQ)
