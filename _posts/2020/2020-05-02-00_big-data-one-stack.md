@@ -26,7 +26,7 @@ article_header:
 
 # Structure
 下面是一个不大完善的数据栈图, 中台可以在此之上做扩展. 
-![db Arch](https://user-images.githubusercontent.com/8369671/83434218-9f0bdf00-a46c-11ea-94a4-5459487f65cd.png)
+![db Arch](https://user-images.githubusercontent.com/8369671/117261126-5e89c200-ae82-11eb-82e7-d052982bdf18.png)
 
 ## data collection
 ![image](https://user-images.githubusercontent.com/8369671/80909688-bf0c8d80-8d5c-11ea-94d4-8201c9142540.png)
