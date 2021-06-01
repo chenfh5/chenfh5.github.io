@@ -6,7 +6,7 @@ pageview: false
 ```go
 the talent of a ninja does not lie in the amount of ninjutsu mastered, 
 but in the perseverance to never give up
-                                                        --- from 20210514, Jiraiya
+                                                        --- from 20210514, jiraiya
 ```
 
 <br>
