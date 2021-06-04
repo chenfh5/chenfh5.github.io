@@ -43,6 +43,14 @@ Only your computer and the VPN server know this key.
 ![image](https://user-images.githubusercontent.com/8369671/120782465-9c026d80-c55c-11eb-86eb-fd00eba39f75.png)
 > create & download key pair
 
+ps. 
+
+有需求的话, 这里可以使用[shadowsocks](https://shadowsocks.org/en/index.html)来替换openvpn. 
+
+这次采用openvpn是因为aws free tier集成了它, 使得安装一键化.
+
+当然如果是[shadowsocks](https://juejin.cn/post/6844903958834593806)的话, 就是在linux下pip/wget来安装.
+
 ## configure openvpn server using SSH
 here `ip1` is your `Public` IPv4 address, `ip2` is your `Private` IPv4 address, 
 1. ssh to ec2 from local with `root`

@@ -1,6 +1,6 @@
 ---
 title: 第二份工作的辞去
-tags: mood
+tags: mood job
 key: -73
 modify_date: 2019-06-04 18:00:00 +08:00
 ---
