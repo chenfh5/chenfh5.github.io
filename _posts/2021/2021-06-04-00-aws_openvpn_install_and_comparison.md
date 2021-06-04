@@ -1,5 +1,5 @@
 ---
-title: aws安装openvpn及对比
+title: aws安装openvpn及部分性能对比
 tags: mood vpn
 key: 124
 article_header:
