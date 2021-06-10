@@ -180,3 +180,12 @@ oops, 啊磊今天recommend的一本书<[囚徒健身](https://book.douban.com/s
 > dinner
 
 ## day4
+![image](https://user-images.githubusercontent.com/8369671/121459293-8fa76600-c9dd-11eb-973f-fe14f64b5ff7.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121459310-9635dd80-c9dd-11eb-9b59-45111f8511e8.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121459302-933aed00-c9dd-11eb-83ec-b7285c808d18.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121459315-98983780-c9dd-11eb-80a1-4bb59a29df38.png)
+
+## day5
