@@ -189,3 +189,24 @@ oops, 啊磊今天recommend的一本书<[囚徒健身](https://book.douban.com/s
 ![image](https://user-images.githubusercontent.com/8369671/121459315-98983780-c9dd-11eb-80a1-4bb59a29df38.png)
 
 ## day5
+![image](https://user-images.githubusercontent.com/8369671/121773789-cb465980-cbb0-11eb-9e89-9d427a9afd96.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121773790-ced9e080-cbb0-11eb-9f01-dcf4ab01fc23.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121773794-d26d6780-cbb0-11eb-95e3-e79acf626fef.png)
+
+## day6
+![image](https://user-images.githubusercontent.com/8369671/121773959-fa10ff80-cbb1-11eb-8f51-b7ef57c47e5e.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121773965-fd0bf000-cbb1-11eb-8204-35a7a2fba2d9.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121773971-07c68500-cbb2-11eb-8637-ca9189316582.png)
+
+## day7
+![image](https://user-images.githubusercontent.com/8369671/121773981-1b71eb80-cbb2-11eb-944c-4f3f17236e90.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121773987-23ca2680-cbb2-11eb-9126-42e2d6ea45ec.png)
+
+![image](https://user-images.githubusercontent.com/8369671/121773982-1f057280-cbb2-11eb-8287-c76f02d13a4c.png)
+
+## day8
