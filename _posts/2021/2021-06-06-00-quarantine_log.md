@@ -221,3 +221,31 @@ oops, 啊磊今天recommend的一本书<[囚徒健身](https://book.douban.com/s
 ## day9 (dragon boat festival)
 ![image](https://user-images.githubusercontent.com/8369671/121837929-5b97b200-cd09-11eb-8bfb-e4db5e595d05.png)
 
+![image](https://user-images.githubusercontent.com/8369671/122021295-1ef6b400-cdf8-11eb-920b-ebba4c3fa365.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122021377-33d34780-cdf8-11eb-8519-4f04bf3e1d91.png)
+
+## day10
+![image](https://user-images.githubusercontent.com/8369671/122021419-3c2b8280-cdf8-11eb-8f85-2989e854c5a6.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122021442-40f03680-cdf8-11eb-8773-084d7ebddea0.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122418673-f4a22380-cfbc-11eb-8d0d-f701ec37ba0d.png)
+
+## day11
+![image](https://user-images.githubusercontent.com/8369671/122418705-fb309b00-cfbc-11eb-8027-fcef6814d024.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122418727-fec42200-cfbc-11eb-9cae-2821ca086f4e.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122418746-02f03f80-cfbd-11eb-8967-72f86b7d732e.png)
+
+## day12
+![image](https://user-images.githubusercontent.com/8369671/122418760-071c5d00-cfbd-11eb-9562-bfd238ce0194.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122418779-0aafe400-cfbd-11eb-9370-3ac23a7c61cb.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122418797-0daad480-cfbd-11eb-827e-a0dbaa1b1943.png)
+
+## day13
+
+## day14
