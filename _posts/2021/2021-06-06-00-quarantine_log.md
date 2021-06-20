@@ -218,7 +218,7 @@ oops, 啊磊今天recommend的一本书<[囚徒健身](https://book.douban.com/s
 
 ![image](https://user-images.githubusercontent.com/8369671/121837717-e88e3b80-cd08-11eb-91a8-28a0f2be79ae.png)
 
-## day9 (dragon boat festival)
+## day9 (Dragon Boat Festival)
 ![image](https://user-images.githubusercontent.com/8369671/121837929-5b97b200-cd09-11eb-8bfb-e4db5e595d05.png)
 
 ![image](https://user-images.githubusercontent.com/8369671/122021295-1ef6b400-cdf8-11eb-920b-ebba4c3fa365.png)
