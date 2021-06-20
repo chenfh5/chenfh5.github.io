@@ -247,5 +247,33 @@ oops, 啊磊今天recommend的一本书<[囚徒健身](https://book.douban.com/s
 ![image](https://user-images.githubusercontent.com/8369671/122418797-0daad480-cfbd-11eb-827e-a0dbaa1b1943.png)
 
 ## day13
+![image](https://user-images.githubusercontent.com/8369671/122666043-9bfda100-d1dd-11eb-9b81-2c0260bed33e.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122666050-a3bd4580-d1dd-11eb-8a24-57b4d11902fc.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122666046-a029be80-d1dd-11eb-9cbf-5d367f3ae0da.png)
 
 ## day14
+![image](https://user-images.githubusercontent.com/8369671/122666055-a750cc80-d1dd-11eb-8eea-c0a28ccbb2bb.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122666062-a9b32680-d1dd-11eb-97c4-e659c952a74b.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122666065-ac158080-d1dd-11eb-9cd5-6104c7d0e861.png)
+
+## day15 (Father's Day)
+![image](https://user-images.githubusercontent.com/8369671/122666067-af107100-d1dd-11eb-8649-7e95c9d81f6a.png)
+> breakfast
+
+![image](https://user-images.githubusercontent.com/8369671/122666068-b172cb00-d1dd-11eb-9b04-450ae4c4d67b.png)
+> time counter
+
+![image](https://user-images.githubusercontent.com/8369671/122666071-b46dbb80-d1dd-11eb-9f3d-0c9549c7b4b4.png)
+
+![image](https://user-images.githubusercontent.com/8369671/122666073-b6d01580-d1dd-11eb-9796-92d1dcad8e9e.png)
+> 统一下放
+
+![image](https://user-images.githubusercontent.com/8369671/122666075-b9326f80-d1dd-11eb-9feb-b456876e68ff.png)
+> pick me up
+
+![image](https://user-images.githubusercontent.com/8369671/122666080-bb94c980-d1dd-11eb-8f0d-24a7631e9f24.png)
+> on the way back to the 7 days home isolation
